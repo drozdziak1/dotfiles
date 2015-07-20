@@ -1,11 +1,11 @@
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
+	if &compatible
+		set nocompatible               " Be iMproved
+	endif
 
-  " Required:
-  set runtimepath+=/home/drozdziak1/.vim/bundle/neobundle.vim/
+	" Required:
+	set runtimepath+=/home/drozdziak1/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
@@ -29,6 +29,8 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'joonty/vdebug'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-surround'
 
 " Required:
 call neobundle#end()
@@ -45,29 +47,29 @@ NeoBundleCheck
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-  endif
-  let g:airline_symbols.space = "\ua0"
+	let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
 
 " neosnippet.vim
 
 " Plugin key-mappings.
- imap <C-k>     <Plug>(neosnippet_expand_or_jump)
- smap <C-k>     <Plug>(neosnippet_expand_or_jump)
- xmap <C-k>     <Plug>(neosnippet_expand_target)
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 
- " SuperTab like snippets behavior.
+" SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
+			\ "\<Plug>(neosnippet_expand_or_jump)"
+			\: pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
+			\ "\<Plug>(neosnippet_expand_or_jump)"
+			\: "\<TAB>"
 
-" " For snippet_complete marker.
+" For snippet_complete marker.
 if has('conceal')
-  set conceallevel=2 concealcursor=i
-  endif
+	set conceallevel=2 concealcursor=i
+endif
 
 " Enable snipMate compatibility feature.
 let g:neosnippet#enable_snipmate_compatibility = 1
