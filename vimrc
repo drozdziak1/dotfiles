@@ -30,6 +30,7 @@ NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'joonty/vdebug'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-surround'
 
 " Required:
 call neobundle#end()
