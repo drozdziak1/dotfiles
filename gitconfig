@@ -1,0 +1,7 @@
+[user]
+	name = Stanisław Drozd
+	email = drozdziak1@gmail.com
+[merge]
+	tool = vimdiff
+[core]
+	editor = vim

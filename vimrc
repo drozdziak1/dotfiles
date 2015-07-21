@@ -31,6 +31,7 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'joonty/vdebug'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'Chiel92/vim-autoformat'
 
 " Required:
 call neobundle#end()
@@ -76,6 +77,7 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+
 " Custom:
 
 " Syntax highlighting
@@ -94,3 +96,5 @@ map <F2> :NERDTreeToggle<CR>
 set ts=2 sw=2
 " Enable neocomplete plugin
 let g:neocomplete#enable_at_startup = 1
+" Map <F3> to autoformat code
+noremap <F3> :Autoformat<CR>
