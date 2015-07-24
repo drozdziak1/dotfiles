@@ -32,6 +32,15 @@ NeoBundle 'joonty/vdebug'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Chiel92/vim-autoformat'
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
 
 " Required:
 call neobundle#end()
@@ -80,6 +89,8 @@ let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 " Custom:
 
+" Map space as leader
+let mapleader = " "
 " Syntax highlighting
 syntax on
 " Syntax highlighting theme:
@@ -98,3 +109,5 @@ set ts=2 sw=2
 let g:neocomplete#enable_at_startup = 1
 " Map <F3> to autoformat code
 noremap <F3> :Autoformat<CR>
+" Map <F12> to refresh the ctags file
+noremap <leader>r :!ctags -R<CR>
