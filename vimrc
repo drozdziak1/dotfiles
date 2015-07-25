@@ -25,7 +25,7 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'xsbeats/vim-blade'
-NeoBundle 'Shougo/vimshell' 
+NeoBundle 'Shougo/vimshell'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'joonty/vdebug'
@@ -33,14 +33,15 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
+			\ 'build' : {
+			\     'windows' : 'tools\\update-dll-mingw',
+			\     'cygwin' : 'make -f make_cygwin.mak',
+			\     'mac' : 'make -f make_mac.mak',
+			\     'linux' : 'make',
+			\     'unix' : 'gmake',
+			\    },
+			\ }
+NeoBundle 'bronson/vim-trailing-whitespace'
 
 " Required:
 call neobundle#end()
@@ -97,6 +98,8 @@ syntax on
 colorscheme Tomorrow-Night
 " Always show line number
 set number
+" Always show \n symbols
+set list
 " Always show tabline
 set laststatus=2
 " Color scheme required by airline
@@ -109,5 +112,7 @@ set ts=2 sw=2
 let g:neocomplete#enable_at_startup = 1
 " Map <F3> to autoformat code
 noremap <F3> :Autoformat<CR>
-" Map <F12> to refresh the ctags file
-noremap <leader>r :!ctags -R<CR>
+" Map <leader>cr to refresh the ctags file
+noremap <leader>rt :!ctags -R<CR>
+" Map <leader>fw to fix trailing spaces
+noremap <leader>fw :FixWhitespace<CR>
