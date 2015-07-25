@@ -98,8 +98,6 @@ syntax on
 colorscheme Tomorrow-Night
 " Always show line number
 set number
-" Always show \n symbols
-set list
 " Always show tabline
 set laststatus=2
 " Color scheme required by airline
