@@ -5,11 +5,11 @@ if has('vim_starting')
 	endif
 
 	" Required:
-	set runtimepath+=/home/drozdziak1/.vim/bundle/neobundle.vim/
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/home/drozdziak1/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
