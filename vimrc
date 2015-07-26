@@ -16,22 +16,13 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Add or remove your Bundles here:
+
+" Shougo's plugins
+NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'xsbeats/vim-blade'
 NeoBundle 'Shougo/vimshell'
-NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'joonty/vdebug'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'Shougo/vimproc.vim', {
 			\ 'build' : {
 			\     'windows' : 'tools\\update-dll-mingw',
@@ -41,8 +32,29 @@ NeoBundle 'Shougo/vimproc.vim', {
 			\     'unix' : 'gmake',
 			\    },
 			\ }
+
+" Tim Pope's plugins
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-surround'
+
+" Scrooloose's plugins
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/syntastic'
+
+
+" Other plugins:
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'xsbeats/vim-blade'
+NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'joonty/vdebug'
+NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+NeoBundle 'mattn/gist-vim'
+NeoBundle 'mattn/webapi-vim'
 
 " Required:
 call neobundle#end()
