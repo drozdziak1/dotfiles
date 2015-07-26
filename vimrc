@@ -42,6 +42,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 			\    },
 			\ }
 NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Required:
 call neobundle#end()
