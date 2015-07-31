@@ -155,26 +155,21 @@ bar {
         status_command i3status
 }
 
-# start the volume control
-exec pasystray
 
 # start the wireless manager
 exec nm-applet
 
 # start system update
-exec "xfce4-terminal --command='yaourt -Syyu --aur --noconfirm'"
+exec "xfce4-terminal --command='sudo apt-get update && sudo apt-get upgrade'"
 
 # change keyboard layout to polish
-exec "setxkbmap pl" 
+exec "setxkbmap pl"
 
 # activate automounting with Thunar
 exec "thunar --daemon"
 
-# fix redshift config bug
-exec "grep -rl '|' ~/.redshiftgrc | xargs sed -i 's/|/,/g'"
-
 # run redshift
-exec "redshiftgui"
+exec "fluxgui"
 
 # prevent screen from blanking:
 exec "export DISPLAY=:0.0"
@@ -199,6 +194,3 @@ exec "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Button' 2"
 exec "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Timeout' 200"
 exec "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Axes' 6 7 4 5"
 exec "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Device Accel Constant Deceleration' 0.75"
-
-# start the auto-rotation script
-	exec "/home/drozdziak1/.arotate"
