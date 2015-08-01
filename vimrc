@@ -104,7 +104,7 @@ let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 " Custom:
 
 " Map space as leader
-let mapleader = " "
+let mapleader = ","
 " Syntax highlighting
 syntax on
 " Syntax highlighting theme:
@@ -127,3 +127,5 @@ noremap <F3> :Autoformat<CR>
 noremap <leader>rt :!ctags -R<CR>
 " Map <leader>fw to fix trailing spaces
 noremap <leader>fw :FixWhitespace<CR>
+" Map <leader>cs to fast colorscheme changing
+noremap <leader>cs :colorscheme<space>
