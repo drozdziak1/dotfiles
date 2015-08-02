@@ -39,6 +39,7 @@ NeoBundle 'tpope/vim-surround'
 
 " Scrooloose's plugins
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/syntastic'
 
 
@@ -128,4 +129,4 @@ noremap <leader>rt :!ctags -R<CR>
 " Map <leader>fw to fix trailing spaces
 noremap <leader>fw :FixWhitespace<CR>
 " Map <leader>cs to fast colorscheme changing
-noremap <leader>cs :colorscheme<space>
+noremap <leader>sc :colorscheme<space>
