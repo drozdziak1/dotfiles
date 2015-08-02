@@ -5,32 +5,57 @@ if has('vim_starting')
 	endif
 
 	" Required:
-	set runtimepath+=/home/drozdziak1/.vim/bundle/neobundle.vim/
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/home/drozdziak1/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Add or remove your Bundles here:
+
+" Shougo's plugins
+NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/vimproc.vim', {
+			\ 'build' : {
+			\     'windows' : 'tools\\update-dll-mingw',
+			\     'cygwin' : 'make -f make_cygwin.mak',
+			\     'mac' : 'make -f make_mac.mak',
+			\     'linux' : 'make',
+			\     'unix' : 'gmake',
+			\    },
+			\ }
+
+" Tim Pope's plugins
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-surround'
+
+" Scrooloose's plugins
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/syntastic'
+
+
+" Other plugins:
+NeoBundle 'honza/vim-snippets'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'xsbeats/vim-blade'
-NeoBundle 'Shougo/vimshell' 
 NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'joonty/vdebug'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'tpope/vim-surround'
+NeoBundle 'Chiel92/vim-autoformat'
+NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+NeoBundle 'mattn/gist-vim'
+NeoBundle 'mattn/webapi-vim'
 
 " Required:
 call neobundle#end()
@@ -76,8 +101,11 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+
 " Custom:
 
+" Map space as leader
+let mapleader = ","
 " Syntax highlighting
 syntax on
 " Syntax highlighting theme:
@@ -94,3 +122,11 @@ map <F2> :NERDTreeToggle<CR>
 set ts=2 sw=2
 " Enable neocomplete plugin
 let g:neocomplete#enable_at_startup = 1
+" Map <F3> to autoformat code
+noremap <F3> :Autoformat<CR>
+" Map <leader>cr to refresh the ctags file
+noremap <leader>rt :!ctags -R<CR>
+" Map <leader>fw to fix trailing spaces
+noremap <leader>fw :FixWhitespace<CR>
+" Map <leader>cs to fast colorscheme changing
+noremap <leader>sc :colorscheme<space>
