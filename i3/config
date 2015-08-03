@@ -168,9 +168,6 @@ exec "setxkbmap pl"
 # activate automounting with Thunar
 exec "thunar --daemon"
 
-# run redshift
-exec "fluxgui"
-
 # prevent screen from blanking:
 exec "export DISPLAY=:0.0"
 exec "xset s off"
@@ -187,10 +184,3 @@ bindsym $mod+Control+Right workspace next
 # binding for moving windows between worspaces
 bindsym $mod+Shift+Control+Left move workspace prev
 bindsym $mod+Shift+Control+Right move workspace next
-
-# set the TrackPoint to emulate a scrolling wheel
-exec "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation' 1"
-exec "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Button' 2"
-exec "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Timeout' 200"
-exec "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Evdev Wheel Emulation Axes' 6 7 4 5"
-exec "xinput set-prop 'TPPS/2 IBM TrackPoint' 'Device Accel Constant Deceleration' 0.75"
