@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+
+# set preferred screens layout
+xrandr --output HDMI1 --primary
+xrandr --output HDMI1 --auto
+xrandr --output HDMI1 --rotate left
+xrandr --output LVDS1 --off
+xrandr --output VGA1 --auto --right-of HDMI1
+
+# prevent screen from blanking
+export DISPLAY=:0.0
+xset s off
+xset s noblank
+xset -dpms
+
+# start skype
+skype &
+
+# change keymap to Polish
+setxkbmap pl
