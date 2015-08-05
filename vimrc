@@ -104,7 +104,7 @@ let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 " Custom:
 
-" Map space as leader
+" Map , as leader
 let mapleader = ","
 " Syntax highlighting
 syntax on
@@ -119,7 +119,7 @@ set t_Co=256
 " Toggle NERDTree on F2
 map <F2> :NERDTreeToggle<CR>
 " Set Tab to 2 spaces
-set ts=2 sw=2
+set ts=4 sw=4
 " Enable neocomplete plugin
 let g:neocomplete#enable_at_startup = 1
 " Map <F3> to autoformat code
