@@ -21,3 +21,6 @@ setxkbmap pl
 
 # Disable the touchpad
 xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
+
+# Restore wallpaper
+nitrogen --restore
