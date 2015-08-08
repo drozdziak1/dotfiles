@@ -131,4 +131,4 @@ noremap <leader>fw :FixWhitespace<CR>
 " Map <leader>cs to fast colorscheme changing
 noremap <leader>sc :colorscheme<space>
 " Map <leader>ve to Vdebug evaluation command
-noremap <leader>ve :VdebugEvaluate<space>
+noremap <leader>ve :VdebugEval<space>
