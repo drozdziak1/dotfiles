@@ -116,8 +116,8 @@ set number
 set laststatus=2
 " Color scheme required by airline
 set t_Co=256
-" Toggle NERDTree on F2
-map <F2> :NERDTreeToggle<CR>
+" Toggle NERDTree on <leader>t
+noremap <leader>t :NERDTreeToggle<CR>
 " Set Tab to 2 spaces
 set ts=4 sw=4
 " Enable neocomplete plugin
@@ -130,3 +130,5 @@ noremap <leader>rt :!ctags -R<CR>
 noremap <leader>fw :FixWhitespace<CR>
 " Map <leader>cs to fast colorscheme changing
 noremap <leader>sc :colorscheme<space>
+" Map <leader>ve to Vdebug evaluation command
+noremap <leader>ve :VdebugEvaluate<space>
