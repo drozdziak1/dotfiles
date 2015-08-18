@@ -132,3 +132,5 @@ noremap <leader>fw :FixWhitespace<CR>
 noremap <leader>sc :colorscheme<space>
 " Map <leader>ve to Vdebug evaluation command
 noremap <leader>ve :VdebugEval<space>
+" Map <leader>w to Ctrl+W for easier pane management
+noremap <leader>w <C-w>
