@@ -165,7 +165,7 @@ exec nm-applet
 exec "xfce4-terminal --command='yaourt -Syyu --aur --noconfirm'"
 
 # change keyboard layout to polish
-exec "setxkbmap pl" 
+exec "setxkbmap pl"
 
 # activate automounting with Thunar
 exec "thunar --daemon"
