@@ -134,3 +134,5 @@ noremap <leader>sc :colorscheme<space>
 noremap <leader>ve :VdebugEval<space>
 " Map <leader>w to Ctrl+W for easier pane management
 noremap <leader>w <C-w>
+" Map <leader>bp to Breakpoint creation in Vdebug
+noremap <leader>b :Breakpoint<CR>
