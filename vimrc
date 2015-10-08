@@ -15,6 +15,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+
 " Add or remove your Bundles here:
 
 " Shougo's plugins
@@ -42,20 +43,24 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/syntastic'
 
+" Joonty's plugins
+NeoBundle 'joonty/vdebug'
+NeoBundle 'joonty/vim-phpqa'
 
-" Other plugins:
+" Mattn's plugins
+NeoBundle 'mattn/gist-vim'
+NeoBundle 'mattn/webapi-vim'
+
+" Other plugins
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'xsbeats/vim-blade'
 NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'joonty/vdebug'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-NeoBundle 'mattn/gist-vim'
-NeoBundle 'mattn/webapi-vim'
 
 " Required:
 call neobundle#end()
@@ -104,7 +109,7 @@ let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 " Custom:
 
-" Map space as leader
+" Map comma as leader
 let mapleader = ","
 " Syntax highlighting
 syntax on
