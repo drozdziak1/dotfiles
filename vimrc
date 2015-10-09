@@ -1,11 +1,11 @@
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
-	if &compatible
-		set nocompatible               " Be iMproved
-	endif
+    if &compatible
+        set nocompatible               " Be iMproved
+    endif
 
-	" Required:
-	set runtimepath+=~/.vim/bundle/neobundle.vim/
+    " Required:
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
@@ -24,14 +24,14 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimproc.vim', {
-			\ 'build' : {
-			\     'windows' : 'tools\\update-dll-mingw',
-			\     'cygwin' : 'make -f make_cygwin.mak',
-			\     'mac' : 'make -f make_mac.mak',
-			\     'linux' : 'make',
-			\     'unix' : 'gmake',
-			\    },
-			\ }
+            \ 'build' : {
+            \     'windows' : 'tools\\update-dll-mingw',
+            \     'cygwin' : 'make -f make_cygwin.mak',
+            \     'mac' : 'make -f make_mac.mak',
+            \     'linux' : 'make',
+            \     'unix' : 'gmake',
+            \    },
+            \ }
 
 " Tim Pope's plugins
 NeoBundle 'tpope/vim-fugitive'
@@ -72,7 +72,7 @@ NeoBundleCheck
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
+    let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
 
@@ -85,15 +85,15 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 " SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-			\ "\<Plug>(neosnippet_expand_or_jump)"
-			\: pumvisible() ? "\<C-n>" : "\<TAB>"
+            \ "\<Plug>(neosnippet_expand_or_jump)"
+            \: pumvisible() ? "\<C-n>" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-			\ "\<Plug>(neosnippet_expand_or_jump)"
-			\: "\<TAB>"
+            \ "\<Plug>(neosnippet_expand_or_jump)"
+            \: "\<TAB>"
 
 " For snippet_complete marker.
 if has('conceal')
-	set conceallevel=2 concealcursor=i
+    set conceallevel=2 concealcursor=i
 endif
 
 " Enable snipMate compatibility feature.
@@ -118,8 +118,8 @@ set laststatus=2
 set t_Co=256
 " Toggle NERDTree on <leader>t
 noremap <leader>t :NERDTreeToggle<CR>
-" Set Tab to 2 spaces
-set ts=4 sw=4
+" set tab to 4 literal spaces
+:set tabstop=4 shiftwidth=4 expandtab
 " Enable neocomplete plugin
 let g:neocomplete#enable_at_startup = 1
 " Map <F3> to autoformat code
