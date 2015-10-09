@@ -109,7 +109,11 @@ let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 " Custom:
 
+<<<<<<< HEAD
+" Map , as leader
+=======
 " Map comma as leader
+>>>>>>> master
 let mapleader = ","
 " Syntax highlighting
 syntax on
@@ -139,5 +143,9 @@ noremap <leader>sc :colorscheme<space>
 noremap <leader>ve :VdebugEval<space>
 " Map <leader>w to Ctrl+W for easier pane management
 noremap <leader>w <C-w>
+<<<<<<< HEAD
+" Map <leader>bp to Breakpoint creation in Vdebug
+=======
 " Map <leader>b to Breakpoint creation command
+>>>>>>> master
 noremap <leader>b :Breakpoint<CR>
