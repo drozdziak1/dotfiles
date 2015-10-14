@@ -45,7 +45,6 @@ NeoBundle 'scrooloose/syntastic'
 
 " Joonty's plugins
 NeoBundle 'joonty/vdebug'
-NeoBundle 'joonty/vim-phpqa'
 
 " Mattn's plugins
 NeoBundle 'mattn/gist-vim'
