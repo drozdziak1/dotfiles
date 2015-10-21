@@ -127,7 +127,7 @@ noremap <leader>t :NERDTreeToggle<CR>
 " Enable neocomplete plugin
 let g:neocomplete#enable_at_startup = 1
 " Map <F3> to autoformat code
-noremap <F3> :Autoformat<CR>
+noremap <leader>af :Autoformat<CR>
 " Map <leader>cr to refresh the ctags file
 noremap <leader>rt :!ctags -R<CR>
 " Map <leader>fw to fix trailing spaces
