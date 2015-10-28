@@ -182,6 +182,9 @@ exec "xset s off"
 exec "xset s noblank"
 exec "xset -dpms"
 
+# adjust the monitor layout
+exec "xrandr --output DVI-I-2 --left-of DVI-I-3"
+
 # set the wallpaper
 exec "nitrogen --restore"
 
