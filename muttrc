@@ -1,0 +1,27 @@
+# get the password
+source "gpg2 -dq $HOME/.mutt/passwords.gpg |"
+
+# Receive options
+set imap_user = "drozdziak1@gmail.com"
+set folder = imaps://drozdziak1@imap.gmail.com/
+set spoolfile = +INBOX
+set postponed = +Drafts
+set record = +Sent
+
+# cache options
+set message_cachedir = ~/.cache/mutt/messages
+set header_cache = ~/.cache/mutt/headers
+
+# Send options
+set smtp_url=smtps://$imap_user:$imap_pass@smtp.gmail.com
+set realname='Stanisław Drozd'
+set from=drozdziak1@gmail.com
+set hostname="gmail.com"
+set signature="Stanisław Drozd"
+
+# Connection options
+set ssl_force_tls = yes
+unset ssl_starttls
+
+# Sorting options
+set sort = reverse-date-received
