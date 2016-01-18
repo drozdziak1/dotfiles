@@ -179,7 +179,6 @@ exec "redshiftgui"
 # prevent screen from blanking:
 exec "export DISPLAY=:0.0"
 exec "xset s off"
-exec "xset s noblank"
 exec "xset -dpms"
 
 # set the wallpaper
