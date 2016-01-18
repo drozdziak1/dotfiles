@@ -24,4 +24,4 @@ set ssl_force_tls = yes
 unset ssl_starttls
 
 # Sorting options
-set sort = reverse-date-received
+set sort = reverse-threads
