@@ -1,5 +1,5 @@
 # get the password
-source "gpg2 -dq $HOME/.mutt/passwords.gpg |"
+source "gpg -dq $HOME/.mutt/passwords.gpg |"
 
 # Receive options
 set imap_user = "drozdziak1@gmail.com"
