@@ -1,5 +1,5 @@
 # get the password
-source "gpg2 -dq $HOME/.mutt/passwords.gpg |"
+source "gpg -dq $HOME/.mutt/passwords.gpg |"
 
 # set the color scheme
 source "/usr/share/doc/mutt/colors/solarized/mutt-colors-solarized-dark-16.muttrc"
