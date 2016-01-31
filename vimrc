@@ -52,14 +52,11 @@ NeoBundle 'mattn/webapi-vim'
 
 " Other plugins
 NeoBundle 'honza/vim-snippets'
-NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'xsbeats/vim-blade'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Required:
 call neobundle#end()
