@@ -1,4 +1,4 @@
-"NeoBundle Scripts-----------------------------
+" NeoBundle Scripts-----------------------------
 if has('vim_starting')
     if &compatible
         set nocompatible               " Be iMproved
@@ -125,7 +125,7 @@ set tabstop=4 shiftwidth=4 expandtab
 let g:neocomplete#enable_at_startup = 1
 " Map ,af to autoformat code
 noremap <leader>af :Autoformat<CR>
-" Map <leader>cr to refresh the ctags file
+" Map <leader>rt to refresh the ctags file
 noremap <leader>rt :!ctags -R<CR>
 " Map <leader>fw to fix trailing spaces
 noremap <leader>fw :FixWhitespace<CR>
