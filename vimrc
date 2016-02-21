@@ -57,6 +57,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'chilicuil/vim-sprunge'
 
 " Required:
 call neobundle#end()
