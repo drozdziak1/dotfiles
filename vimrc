@@ -43,12 +43,8 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/syntastic'
 
-" Joonty's plugins
-NeoBundle 'joonty/vdebug'
-
 " Mattn's plugins
 NeoBundle 'mattn/gist-vim'
-NeoBundle 'mattn/webapi-vim'
 
 " Other plugins
 NeoBundle 'honza/vim-snippets'
