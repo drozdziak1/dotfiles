@@ -156,5 +156,5 @@ noremap <leader>b :Breakpoint<CR>
 let g:formatters_c = ['astyle_c']
 
 if !exists('g:formatdef_astyle_c')
-    let g:formatdef_astyle_c = '"astyle --mode=c --style=kr -pcH".(&expandtab ? "s".shiftwidth() : "t")'
+    let g:formatdef_astyle_c = '"astyle --mode=c --style=kr -k3 -pcH".(&expandtab ? "s".shiftwidth() : "t")'
 endif
