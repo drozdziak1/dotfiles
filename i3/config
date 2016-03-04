@@ -184,6 +184,9 @@ exec "xset -dpms"
 # set the wallpaper
 exec "nitrogen --restore"
 
+# run skype
+exec "skype"
+
 # binding for switching workspaces
 bindsym $mod+Control+Left workspace prev
 bindsym $mod+Control+Right workspace next
