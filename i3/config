@@ -193,4 +193,4 @@ bindsym $mod+Shift+Control+Left move workspace prev
 bindsym $mod+Shift+Control+Right move workspace next
 
 # binding for screen locking
-bindsym $mod+Control+l exec "i3lock -c 000000 -d -I 5 -f"
+bindsym $mod+Control+l exec "i3lock -c 000000 -f"
