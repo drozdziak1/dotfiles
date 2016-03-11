@@ -59,6 +59,7 @@ export PATH="/usr/lib/hardening-wrapper/bin:/usr/local/sbin:/usr/local/bin:/usr/
 source $ZSH/oh-my-zsh.sh
 
 export BROWSER=/usr/bin/firefox
+export GIT_NO_SSL_VERIFY=true
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
