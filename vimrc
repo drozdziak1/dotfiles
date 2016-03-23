@@ -161,9 +161,3 @@ endif
 
 " Set a folding method
 set foldmethod=syntax
-
-" Map <leader>zoa to opening all folds
-noremap <leader>zoa :set foldlevel=20<CR>
-
-" Map <leader>zca to closing all folds
-noremap <leader>zca :set foldlevel=0<CR>
