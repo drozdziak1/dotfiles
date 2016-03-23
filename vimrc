@@ -158,3 +158,12 @@ let g:formatters_c = ['astyle_c']
 if !exists('g:formatdef_astyle_c')
     let g:formatdef_astyle_c = '"astyle --mode=c --style=kr -k3 -pcH".(&expandtab ? "s".shiftwidth() : "t")'
 endif
+
+" Set a folding method
+set foldmethod=syntax
+
+" Map <leader>zoa to opening all folds
+noremap <leader>zoa :set foldlevel=20<CR>
+
+" Map <leader>zca to closing all folds
+noremap <leader>zca :set foldlevel=0<CR>
