@@ -1,2 +1,9 @@
+# vim plugins and swapfiles
 vim/*
 *.swp
+
+# weechat
+weechat/*.log
+weechat/logs
+weechat/weechat_fifo*
+weechat/script/plugins.xml.gz

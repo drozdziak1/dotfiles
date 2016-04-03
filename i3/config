@@ -181,6 +181,9 @@ exec "export DISPLAY=:0.0"
 exec "xset s off"
 exec "xset -dpms"
 
+# activate the default screen layout
+exec "~/.screenlayout/default.sh"
+
 # set the wallpaper
 exec "nitrogen --restore"
 
@@ -193,4 +196,4 @@ bindsym $mod+Shift+Control+Left move workspace prev
 bindsym $mod+Shift+Control+Right move workspace next
 
 # binding for screen locking
-bindsym $mod+Control+l exec "i3lock"
+bindsym $mod+Control+l exec "i3lock -c 000000 -f"

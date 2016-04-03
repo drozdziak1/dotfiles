@@ -1,4 +1,4 @@
-"NeoBundle Scripts-----------------------------
+" NeoBundle Scripts-----------------------------
 if has('vim_starting')
     if &compatible
         set nocompatible               " Be iMproved
@@ -43,23 +43,18 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'scrooloose/syntastic'
 
-" Joonty's plugins
-NeoBundle 'joonty/vdebug'
-
 " Mattn's plugins
 NeoBundle 'mattn/gist-vim'
-NeoBundle 'mattn/webapi-vim'
 
 " Other plugins
 NeoBundle 'honza/vim-snippets'
-NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'xsbeats/vim-blade'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+NeoBundle 'chilicuil/vim-sprunge'
 
 " Required:
 call neobundle#end()
@@ -106,37 +101,63 @@ let g:neosnippet#enable_snipmate_compatibility = 1
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
+
 " Custom:
 
 " Map comma as leader
 let mapleader = ","
+
 " Syntax highlighting
 syntax on
+
 " Syntax highlighting theme:
 colorscheme Tomorrow-Night
+
 " Always show line number
 set number
+
 " Always show tabline
 set laststatus=2
+
 " Color scheme required by airline
 set t_Co=256
+
 " Toggle NERDTree on <leader>t
 noremap <leader>t :NERDTreeToggle<CR>
+
 " set tab to 4 literal spaces
 set tabstop=4 shiftwidth=4 expandtab
+
 " Enable neocomplete plugin
 let g:neocomplete#enable_at_startup = 1
+
 " Map ,af to autoformat code
 noremap <leader>af :Autoformat<CR>
-" Map <leader>cr to refresh the ctags file
+
+" Map <leader>rt to refresh the ctags file
 noremap <leader>rt :!ctags -R<CR>
+
 " Map <leader>fw to fix trailing spaces
 noremap <leader>fw :FixWhitespace<CR>
+
 " Map <leader>cs to fast colorscheme changing
 noremap <leader>sc :colorscheme<space>
+
 " Map <leader>ve to Vdebug evaluation command
 noremap <leader>ve :VdebugEval<space>
+
 " Map <leader>w to Ctrl+W for easier pane management
 noremap <leader>w <C-w>
+
 " Map <leader>b to Breakpoint creation command
 noremap <leader>b :Breakpoint<CR>
+
+" Fix asterisk placement for C
+let g:formatters_c = ['astyle_c']
+
+if !exists('g:formatdef_astyle_c')
+    let g:formatdef_astyle_c = '"astyle --mode=c --style=kr -k3 -pcH".(&expandtab ? "s".shiftwidth() : "t")'
+endif
+
+" Set a folding method
+set foldmethod=syntax
