@@ -181,6 +181,9 @@ exec "export DISPLAY=:0.0"
 exec "xset s off"
 exec "xset -dpms"
 
+# restore screen layout
+exec "~/.screenlayout.sh"
+
 # set the wallpaper
 exec "nitrogen --restore"
 
