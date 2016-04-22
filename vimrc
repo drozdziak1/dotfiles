@@ -161,3 +161,5 @@ if !exists('g:formatdef_astyle_c')
     let g:formatdef_astyle_c = '"astyle --mode=c --style=kr -k3 -pcH".(&expandtab ? "s".shiftwidth() : "t")'
 endif
 
+" Set a folding method
+set foldmethod=syntax
