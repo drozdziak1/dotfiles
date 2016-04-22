@@ -20,9 +20,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Shougo's plugins
 NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimproc.vim', {
             \ 'build' : {
@@ -48,6 +49,7 @@ NeoBundle 'mattn/gist-vim'
 
 " Other plugins
 NeoBundle 'honza/vim-snippets'
+NeoBundle 'SirVer/ultisnips'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
@@ -158,3 +160,4 @@ let g:formatters_c = ['astyle_c']
 if !exists('g:formatdef_astyle_c')
     let g:formatdef_astyle_c = '"astyle --mode=c --style=kr -k3 -pcH".(&expandtab ? "s".shiftwidth() : "t")'
 endif
+
