@@ -21,7 +21,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Shougo's plugins
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimshell'
