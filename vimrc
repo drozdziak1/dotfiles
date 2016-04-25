@@ -18,10 +18,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Add or remove your Bundles here:
 
+" Airline
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
+
 " Shougo's plugins
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimproc.vim', {
@@ -46,12 +48,13 @@ NeoBundle 'scrooloose/syntastic'
 " Mattn's plugins
 NeoBundle 'mattn/gist-vim'
 
-" Other plugins
+" Snippets
+NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'SirVer/ultisnips'
+
+" Other plugins
 NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'bronson/vim-trailing-whitespace'
@@ -75,32 +78,6 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
-
-" neosnippet.vim
-
-" Plugin key-mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-            \ "\<Plug>(neosnippet_expand_or_jump)"
-            \: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-            \ "\<Plug>(neosnippet_expand_or_jump)"
-            \: "\<TAB>"
-
-" For snippet_complete marker.
-if has('conceal')
-    set conceallevel=2 concealcursor=i
-endif
-
-" Enable snipMate compatibility feature.
-let g:neosnippet#enable_snipmate_compatibility = 1
-
-" Tell Neosnippet about the other snippets
-let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
 
 " Custom:
@@ -128,9 +105,6 @@ noremap <leader>t :NERDTreeToggle<CR>
 
 " set tab to 4 literal spaces
 set tabstop=4 shiftwidth=4 expandtab
-
-" Enable neocomplete plugin
-let g:neocomplete#enable_at_startup = 1
 
 " Map ,af to autoformat code
 noremap <leader>af :Autoformat<CR>
@@ -162,3 +136,11 @@ endif
 
 " Set a folding method
 set foldmethod=syntax
+
+" Give YouCompleteMe access to python3
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
+
+" Set ultisnips shortcuts
+let g:UltiSnipsExpandTrigger="<C-k>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<C-tab>"
