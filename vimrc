@@ -25,7 +25,7 @@ NeoBundle 'vim-airline/vim-airline-themes'
 " Shougo's plugins
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/vimproc.vim', {
             \ 'build' : {
             \     'windows' : 'tools\\update-dll-mingw',
