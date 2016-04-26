@@ -82,29 +82,10 @@ let g:airline_symbols.space = "\ua0"
 
 " Custom:
 
+" Keymaps:
+
 " Map comma as leader
 let mapleader = ","
-
-" Syntax highlighting
-syntax on
-
-" Syntax highlighting theme:
-colorscheme Tomorrow-Night
-
-" Always show line number
-set number
-
-" Always show tabline
-set laststatus=2
-
-" Color scheme required by airline
-set t_Co=256
-
-" Toggle NERDTree on <leader>t
-noremap <leader>t :NERDTreeToggle<CR>
-
-" set tab to 4 literal spaces
-set tabstop=4 shiftwidth=4 expandtab
 
 " Map ,af to autoformat code
 noremap <leader>af :Autoformat<CR>
@@ -126,6 +107,44 @@ noremap <leader>w <C-w>
 
 " Map <leader>b to Breakpoint creation command
 noremap <leader>b :Breakpoint<CR>
+
+" Toggle NERDTree on <leader>t
+noremap <leader>t :NERDTreeToggle<CR>
+
+" Pane resize maps
+
+" Taller
+noremap <leader>w. :res+5<CR>
+
+" Shorter
+noremap <leader>w, :res-5<CR>
+
+" Wider
+noremap <leader>w> :vertical res +5<CR>
+
+" Narrower
+noremap <leader>w< :vertical res -5<CR>"
+
+
+" Miscellanous:
+
+" Syntax highlighting
+syntax on
+
+" Syntax highlighting theme:
+colorscheme Tomorrow-Night
+
+" Always show line number
+set number
+
+" Always show tabline
+set laststatus=2
+
+" Color scheme required by airline
+set t_Co=256
+
+" set tab to 4 literal spaces
+set tabstop=4 shiftwidth=4 expandtab
 
 " Fix asterisk placement for C
 let g:formatters_c = ['astyle_c']
