@@ -59,6 +59,7 @@ NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'chilicuil/vim-sprunge'
+NeoBundle 'vim-utils/vim-man'
 
 " Required:
 call neobundle#end()
@@ -127,6 +128,15 @@ noremap <leader>w <C-w>
 " Map <leader>b to Breakpoint creation command
 noremap <leader>b :Breakpoint<CR>
 
+" Split resizing
+noremap <leader>w, :res -5<CR>
+noremap <leader>w. :res +5<CR>
+noremap <leader>w< :vertical res -5<CR>
+noremap <leader>w> :vertical res +5<CR>
+
+" VimShell
+noremap <leader>vs :VimShell<CR>
+
 " Fix asterisk placement for C
 let g:formatters_c = ['astyle_c']
 
@@ -144,3 +154,5 @@ let g:ycm_server_python_interpreter = '/usr/bin/python3'
 let g:UltiSnipsExpandTrigger="<C-k>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<C-tab>"
+
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
