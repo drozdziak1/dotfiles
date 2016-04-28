@@ -112,8 +112,11 @@ noremap <leader>b :Breakpoint<CR>
 " Toggle NERDTree on <leader>t
 noremap <leader>t :NERDTreeToggle<CR>
 
-" Pane resize maps
+" Shell
+noremap <leader>z :!echo "\n******************IN A SHELL RUN BY VIM**********************\n" && $SHELL<CR>
 
+
+" Pane resize maps
 " Taller
 noremap <leader>w. :res+5<CR>
 
@@ -126,8 +129,7 @@ noremap <leader>w> :vertical res +5<CR>
 " Narrower
 noremap <leader>w< :vertical res -5<CR>"
 
-" VimShell
-noremap <leader>vs :VimShell<CR>
+
 
 " Miscellanous:
 
