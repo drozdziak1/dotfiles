@@ -164,9 +164,11 @@ set foldmethod=syntax
 " Give YouCompleteMe access to python3
 let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
+" Set a global cflags file for YouCompleteMe
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
+
 " Set ultisnips shortcuts
 let g:UltiSnipsExpandTrigger="<C-k>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<C-tab>"
 
-let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
