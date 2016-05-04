@@ -115,6 +115,9 @@ noremap <leader>t :NERDTreeToggle<CR>
 " Suspend to shell
 noremap <leader>z <C-z>
 
+" VimShell
+noremap <leader>vs :VimShell<CR>
+
 
 " Pane resizing mapings
 " Taller
@@ -172,4 +175,5 @@ let g:ycm_server_python_interpreter = '/usr/bin/python3'
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 
 " Configure the colorcolumn
+set textwidth=80
 set colorcolumn=+1
