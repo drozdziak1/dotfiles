@@ -112,11 +112,14 @@ noremap <leader>b :Breakpoint<CR>
 " Toggle NERDTree on <leader>t
 noremap <leader>t :NERDTreeToggle<CR>
 
-" Shell
-noremap <leader>z :!echo "\n******************IN A SHELL RUN BY VIM**********************\n" && $SHELL<CR>
+" Suspend to shell
+noremap <leader>z <C-z>
+
+" VimShell
+noremap <leader>vs :VimShell<CR>
 
 
-" Pane resize maps
+" Pane resizing mapings
 " Taller
 noremap <leader>w. :res+5<CR>
 
@@ -129,6 +132,10 @@ noremap <leader>w> :vertical res +5<CR>
 " Narrower
 noremap <leader>w< :vertical res -5<CR>"
 
+" Set ultisnips shortcuts
+let g:UltiSnipsExpandTrigger="<C-k>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<C-tab>"
 
 
 " Miscellanous:
@@ -167,8 +174,6 @@ let g:ycm_server_python_interpreter = '/usr/bin/python3'
 " Set a global cflags file for YouCompleteMe
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 
-" Set ultisnips shortcuts
-let g:UltiSnipsExpandTrigger="<C-k>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<C-tab>"
-
+" Configure the colorcolumn
+set textwidth=80
+set colorcolumn=+1

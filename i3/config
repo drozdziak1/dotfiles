@@ -191,9 +191,15 @@ exec "nitrogen --restore"
 bindsym $mod+Control+Left workspace prev
 bindsym $mod+Control+Right workspace next
 
+bindsym $mod+Control+j workspace prev
+bindsym $mod+Control+semicolon workspace next
+
 # binding for moving windows between worspaces
 bindsym $mod+Shift+Control+Left move workspace prev
 bindsym $mod+Shift+Control+Right move workspace next
+
+bindsym $mod+Shift+Control+j move workspace prev
+bindsym $mod+Shift+Control+semicolon move workspace next
 
 # binding for screen locking
 bindsym $mod+Control+l exec "i3lock -c 000000 -f"
