@@ -26,8 +26,11 @@ font pango:DejaVu Sans Mono 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
+# start a terminal with tmux
 bindsym $mod+Return exec "xfce4-terminal --command='tmux -2'"
+
+# start a terminal without tmux
+bindsym $mod+Shift+Return exec "xfce4-terminal"
 
 # kill focused window
 bindsym $mod+Shift+q kill
