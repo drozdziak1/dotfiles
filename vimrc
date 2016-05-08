@@ -1,76 +1,44 @@
-" NeoBundle Scripts-----------------------------
-if has('vim_starting')
-    if &compatible
-        set nocompatible               " Be iMproved
-    endif
-
-    " Required:
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-
-" Add or remove your Bundles here:
+call plug#begin('~/.vim/plugged')
 
 " Airline
-NeoBundle 'vim-airline/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Shougo's plugins
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'Shougo/vimproc.vim', {
-            \ 'build' : {
-            \     'windows' : 'tools\\update-dll-mingw',
-            \     'cygwin' : 'make -f make_cygwin.mak',
-            \     'mac' : 'make -f make_mac.mak',
-            \     'linux' : 'make',
-            \     'unix' : 'gmake',
-            \    },
-            \ }
+Plug 'Shougo/neobundle.vim'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'Shougo/vimshell.vim'
+Plug 'Shougo/vimproc.vim', { 'do': 'make'}
 
 " Tim Pope's plugins
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 
 " Scrooloose's plugins
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
 
 " Mattn's plugins
-NeoBundle 'mattn/gist-vim'
+Plug 'mattn/gist-vim'
 
 " Snippets
-NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'SirVer/ultisnips'
+Plug 'Valloric/YouCompleteMe', {'do': './install.py --all'}
+Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
 
 " Other plugins
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'Chiel92/vim-autoformat'
-NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'chilicuil/vim-sprunge'
-NeoBundle 'vim-utils/vim-man'
-
-" Required:
-call neobundle#end()
+Plug 'flazz/vim-colorschemes'
+Plug 'jiangmiao/auto-pairs'
+Plug 'Chiel92/vim-autoformat'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'chilicuil/vim-sprunge'
+Plug 'vim-utils/vim-man'
 
 " Required:
 filetype plugin indent on
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-"End NeoBundle Scripts-------------------------
+call plug#end()
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
