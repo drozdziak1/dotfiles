@@ -1,3 +1,5 @@
+set nocompatible
+
 call plug#begin('~/.vim/plugged')
 
 " Airline
@@ -23,7 +25,7 @@ Plug 'scrooloose/syntastic'
 Plug 'mattn/gist-vim'
 
 " Snippets
-Plug 'Valloric/YouCompleteMe', {'do': './install.py --all'}
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --gocode-completer --racer-completer --tern-completer' }
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 
@@ -34,6 +36,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'chilicuil/vim-sprunge'
 Plug 'vim-utils/vim-man'
+Plug 'mtth/scratch.vim'
 
 " Required:
 filetype plugin indent on
