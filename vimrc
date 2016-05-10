@@ -149,3 +149,8 @@ let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 " Configure the colorcolumn
 set textwidth=80
 set colorcolumn=+1
+
+if has('gui_running')
+
+    set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 8
+endif
