@@ -23,6 +23,7 @@ Plug 'scrooloose/syntastic'
 
 " Mattn's plugins
 Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
 
 " Snippets
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --gocode-completer --racer-completer --tern-completer' }
