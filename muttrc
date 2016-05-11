@@ -31,9 +31,11 @@ set sort = reverse-threads
 
 source ~/.gpg.rc
 
-# GPG setup
+# PGP setup
 set pgp_use_gpg_agent = yes
 set pgp_sign_as = D55E7C65
 set pgp_timeout = 3600
 set crypt_autosign = no
+set crypt_replysign = yes
 set crypt_replyencrypt = yes
+set crypt_replysignencrypted = yes
