@@ -7,5 +7,3 @@
 	editor = vim
 [github]
 	user = drozdziak1
-[http]
-    sslVerify = false
