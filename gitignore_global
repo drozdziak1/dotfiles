@@ -1,0 +1,8 @@
+# vim
+.*.swp
+
+# ctags
+tags
+
+# merge trash (turning them off is awesome until you mess up)
+*.orig
