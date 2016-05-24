@@ -8,3 +8,7 @@
     excludesfile = ~/.gitignore_global
 [github]
 	user = drozdziak1
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
