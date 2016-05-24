@@ -104,6 +104,10 @@ noremap <leader>w> :vertical res +5<CR>
 " Narrower
 noremap <leader>w< :vertical res -5<CR>"
 
+" Close everything
+noremap <leader>wa :qa<CR>
+
+
 " Set ultisnips shortcuts
 let g:UltiSnipsExpandTrigger="<C-k>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"

@@ -88,3 +88,4 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias zshconfig="$EDITOR ~/.zshrc"
+alias vimconfig="$EDITOR ~/.vimrc"
