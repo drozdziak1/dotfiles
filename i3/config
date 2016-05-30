@@ -184,11 +184,14 @@ exec "export DISPLAY=:0.0"
 exec "xset s off"
 exec "xset -dpms"
 
-# activate the default screen layout
-exec "sh ~/.screenlayout/default.sh"
+# restore screen layout
+exec "sh ~/.screenlayout.sh"
 
 # set the wallpaper
 exec "nitrogen --restore"
+
+# run skype
+exec "skype"
 
 # binding for switching workspaces
 bindsym $mod+Control+Left workspace prev

@@ -72,14 +72,14 @@ noremap <leader>fw :FixWhitespace<CR>
 " Map <leader>cs to fast colorscheme changing
 noremap <leader>sc :colorscheme<space>
 
-" Map <leader>ve to Vdebug evaluation command
-noremap <leader>ve :VdebugEval<space>
-
 " Map <leader>w to Ctrl+W for easier pane management
 noremap <leader>w <C-w>
 
 " Map <leader>b to Breakpoint creation command
 noremap <leader>b :Breakpoint<CR>
+
+" Insert space under cursor
+noremap <leader><space> i<space><esc>
 
 " Toggle NERDTree on <leader>t
 noremap <leader>t :NERDTreeToggle<CR>
@@ -103,6 +103,10 @@ noremap <leader>w> :vertical res +5<CR>
 
 " Narrower
 noremap <leader>w< :vertical res -5<CR>"
+
+" Close everything
+noremap <leader>wa :qa<CR>
+
 
 " Set ultisnips shortcuts
 let g:UltiSnipsExpandTrigger="<C-k>"
