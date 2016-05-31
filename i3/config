@@ -185,13 +185,10 @@ exec "xset s off"
 exec "xset -dpms"
 
 # restore screen layout
-exec "sh ~/.screenlayout.sh"
+exec "sh ~/.screenlayout/default.sh"
 
 # set the wallpaper
 exec "nitrogen --restore"
-
-# run skype
-exec "skype"
 
 # binding for switching workspaces
 bindsym $mod+Control+Left workspace prev
