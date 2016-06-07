@@ -195,7 +195,7 @@ workspace 6 output VGA1
 exec "nitrogen --restore"
 
 # run skype
-exec "skype"
+exec i3-msg "workspace 6; exec skype"
 
 # binding for switching workspaces
 bindsym $mod+Control+Left workspace prev
