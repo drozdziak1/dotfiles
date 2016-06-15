@@ -7,3 +7,6 @@ weechat/*.log
 weechat/logs
 weechat/weechat_fifo*
 weechat/script/plugins.xml.gz
+
+# merge trash
+*.orig
