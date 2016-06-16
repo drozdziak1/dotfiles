@@ -189,6 +189,7 @@ exec "sh ~/.screenlayout.sh"
 
 # assign workspaces
 workspace 1 output LVDS1
+workspace 2 output LVDS1
 workspace 6 output VGA1
 
 # set the wallpaper
