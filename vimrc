@@ -26,7 +26,7 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 
 " Snippets
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --gocode-completer --racer-completer --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --gocode-completer --racer-completer --tern-completer' }
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 
