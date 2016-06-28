@@ -156,6 +156,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        tray_output primary
 }
 
 # start the volume control
@@ -165,7 +166,7 @@ exec pasystray
 exec nm-applet
 
 # start system update
-exec "xfce4-terminal --command='yaourt -Syyu --aur --noconfirm'"
+exec "xfce4-terminal --command='sudo apt-get update && sudo apt-get upgrade'"
 
 # change keyboard layout to polish
 exec "setxkbmap pl"

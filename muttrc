@@ -2,7 +2,7 @@
 source "gpg -dq $HOME/.mutt/passwords.gpg |"
 
 # set the color scheme
-source "/usr/share/doc/mutt/colors/solarized/mutt-colors-solarized-dark-16.muttrc"
+source ~/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
 
 # Receive options
 set imap_user = "drozdziak1@gmail.com"
@@ -33,7 +33,6 @@ source ~/.gpg.rc
 
 # PGP setup
 set pgp_use_gpg_agent = yes
-set pgp_sign_as = D55E7C65
 set pgp_timeout = 3600
 set crypt_autosign = no
 set crypt_replysign = yes
