@@ -26,7 +26,8 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 
 " Snippets
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --gocode-completer --racer-completer --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 
@@ -80,6 +81,10 @@ noremap <leader>b :Breakpoint<CR>
 
 " Insert space under cursor
 noremap <leader><space> i<space><esc>
+
+" Insert empty line above/below cursor
+noremap <leader>o o<esc>
+noremap <leader>O O<esc>
 
 " Toggle NERDTree on <leader>t
 noremap <leader>t :NERDTreeToggle<CR>
@@ -145,7 +150,7 @@ endif
 set foldmethod=syntax
 
 " Give YouCompleteMe access to python3
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 
 " Set a global cflags file for YouCompleteMe
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
