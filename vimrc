@@ -26,7 +26,7 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 
 " Snippets
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --gocode-completer --racer-completer --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --gocode-completer --clang-completer --tern-completer --racer-completer' }
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 
@@ -80,6 +80,10 @@ noremap <leader>b :Breakpoint<CR>
 
 " Insert space under cursor
 noremap <leader><space> i<space><esc>
+
+" Insert empty line above/below cursor
+noremap <leader>o o<esc>
+noremap <leader>O O<esc>
 
 " Toggle NERDTree on <leader>t
 noremap <leader>t :NERDTreeToggle<CR>
