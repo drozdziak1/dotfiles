@@ -26,7 +26,8 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 
 " Snippets
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --gocode-completer --racer-completer --tern-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 
@@ -81,6 +82,10 @@ noremap <leader>b :Breakpoint<CR>
 " Insert space under cursor
 noremap <leader><space> i<space><esc>
 
+" Insert empty line above/below cursor
+noremap <leader>o o<esc>
+noremap <leader>O O<esc>
+
 " Toggle NERDTree on <leader>t
 noremap <leader>t :NERDTreeToggle<CR>
 
@@ -133,13 +138,6 @@ set t_Co=256
 
 " set tab to 4 literal spaces
 set tabstop=4 shiftwidth=4 expandtab
-
-" Fix asterisk placement for C
-let g:formatters_c = ['astyle_c']
-
-if !exists('g:formatdef_astyle_c')
-    let g:formatdef_astyle_c = '"astyle --mode=c --style=kr -k3 -pcH".(&expandtab ? "s".shiftwidth() : "t")'
-endif
 
 " Set a folding method
 set foldmethod=syntax
