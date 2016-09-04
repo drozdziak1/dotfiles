@@ -188,8 +188,8 @@ exec "xset -dpms"
 exec "sh ~/.screenlayout/default.sh"
 
 # bind initial workspaces to the correct monitors
-workspace 1 output DVI-I-1
-workspace 2 output DVI-I-2
+# workspace 1 output DVI-I-1
+# workspace 2 output DVI-I-2
 
 # set the wallpaper
 exec "nitrogen --restore"
