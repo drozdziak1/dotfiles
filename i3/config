@@ -190,7 +190,7 @@ exec "sh ~/.screenlayout"
 
 # bind workspaces
 workspace 1 output VGA1
-workspace 2 output HDMI1
+workspace 2 output VGA1
 workspace 5 output HDMI1
 
 # set the wallpaper
