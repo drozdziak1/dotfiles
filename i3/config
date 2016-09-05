@@ -166,7 +166,7 @@ exec pasystray
 exec nm-applet
 
 # start system update
-exec "xfce4-terminal --command='sudo apt-get update && sudo apt-get upgrade'"
+exec "xfce4-terminal --command='yaourt -Syyua --noconfirm'"
 
 # change keyboard layout to polish
 exec "setxkbmap pl"
@@ -186,18 +186,15 @@ exec "xset s off"
 exec "xset -dpms"
 
 # restore screen layout
-exec "sh ~/.screenlayout.sh"
+exec "sh ~/.screenlayout"
 
-# assign workspaces
-workspace 1 output LVDS1
-workspace 2 output LVDS1
-workspace 6 output VGA1
+# bind workspaces
+workspace 1 output VGA1
+workspace 2 output HDMI1
+workspace 5 output HDMI1
 
 # set the wallpaper
 exec "nitrogen --restore"
-
-# run skype
-exec i3-msg "workspace 6; exec skype"
 
 # binding for switching workspaces
 bindsym $mod+Control+Left workspace prev
