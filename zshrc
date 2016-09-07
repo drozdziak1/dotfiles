@@ -53,7 +53,7 @@ plugins=(git themes)
 
 # User configuration
 
-export PATH="/usr/lib/hardening-wrapper/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/cuda/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:~/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:~/.composer/vendor/bin:~/.gem/ruby/2.2.0/bin:/bin"
+export PATH="/usr/lib/hardening-wrapper/bin:/opt/cuda/bin:/usr/bin/core_perl:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/local/bin:/usr/local/sbin:$HOME/.composer/vendor/bin:$HOME/.gem/ruby/2.2.0/bin:/bin:$HOME/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
