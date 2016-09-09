@@ -10,6 +10,7 @@ set header_cache = ~/.mutt/headers
 
 # Sorting options
 set sort = reverse-threads
+set sort_aux = last-date
 
 # Choose an account to load on start
 source ~/.muttrc.gmail
