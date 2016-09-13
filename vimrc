@@ -15,6 +15,7 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make'}
 " Tim Pope's plugins
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sleuth'
 
 " Scrooloose's plugins
 Plug 'scrooloose/nerdtree'
@@ -137,7 +138,7 @@ set laststatus=2
 set t_Co=256
 
 " set tab to 4 literal spaces
-set tabstop=4 shiftwidth=4 expandtab
+" set tabstop=4 shiftwidth=4 expandtab
 
 " Fix asterisk placement for C
 let g:formatters_c = ['astyle_c']
@@ -156,7 +157,7 @@ let g:ycm_server_python_interpreter = '/usr/bin/python'
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 
 " Configure the colorcolumn
-set textwidth=80
+set textwidth=120
 set colorcolumn=+1
 
 if has('gui_running')
