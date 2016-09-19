@@ -40,6 +40,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'chilicuil/vim-sprunge'
 Plug 'vim-utils/vim-man'
 Plug 'mtth/scratch.vim'
+Plug 'brookhong/cscope.vim'
 
 " Required:
 filetype plugin indent on
@@ -118,6 +119,10 @@ noremap <leader>wa :qa<CR>
 let g:UltiSnipsExpandTrigger="<C-k>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<C-tab>"
+
+" Cscope
+nnoremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
+nnoremap <leader>l :call ToggleLocationList()<CR>
 
 
 " Miscellanous:

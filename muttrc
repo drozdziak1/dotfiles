@@ -13,8 +13,8 @@ set sort = reverse-threads
 set sort_aux = last-date
 
 # Choose an account to load on start
-source ~/.muttrc.gmail
-#source ~/.muttrc.cubiware
+#source ~/.muttrc.gmail
+source ~/.muttrc.cubiware
 
 macro index,pager <f2> "<sync-mailbox><enter-command>source ~/.muttrc.gmail<enter><change-folder>!<enter>"
 macro index,pager <f3> "<sync-mailbox><enter-command>source ~/.muttrc.cubiware<enter><change-folder>!<enter>"
