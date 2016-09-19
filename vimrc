@@ -15,6 +15,7 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make'}
 " Tim Pope's plugins
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sleuth'
 
 " Scrooloose's plugins
 Plug 'scrooloose/nerdtree'
@@ -39,6 +40,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'chilicuil/vim-sprunge'
 Plug 'vim-utils/vim-man'
 Plug 'mtth/scratch.vim'
+Plug 'brookhong/cscope.vim'
 
 " Required:
 filetype plugin indent on
@@ -118,6 +120,10 @@ let g:UltiSnipsExpandTrigger="<C-k>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<C-tab>"
 
+" Cscope
+nnoremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
+nnoremap <leader>l :call ToggleLocationList()<CR>
+
 
 " Miscellanous:
 
@@ -137,19 +143,26 @@ set laststatus=2
 set t_Co=256
 
 " set tab to 4 literal spaces
-set tabstop=4 shiftwidth=4 expandtab
+" set tabstop=4 shiftwidth=4 expandtab
+
+" Fix asterisk placement for C
+let g:formatters_c = ['astyle_c']
+
+if !exists('g:formatdef_astyle_c')
+    let g:formatdef_astyle_c = '"astyle --mode=c --style=kr -k3 -pcH".(&expandtab ? "s".shiftwidth() : "t")'
+endif
 
 " Set a folding method
 set foldmethod=syntax
 
 " Give YouCompleteMe access to python3
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 
 " Set a global cflags file for YouCompleteMe
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 
 " Configure the colorcolumn
-set textwidth=80
+set textwidth=120
 set colorcolumn=+1
 
 if has('gui_running')
