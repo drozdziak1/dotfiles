@@ -6,3 +6,6 @@ tags
 
 # merge trash (turning them off is awesome until you mess up)
 *.orig
+
+# cscope
+cscope.out
