@@ -18,7 +18,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
 
 " Scrooloose's plugins
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
 
@@ -29,8 +29,8 @@ Plug 'mattn/webapi-vim'
 " Snippets
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
-Plug 'honza/vim-snippets'
-Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " Other plugins
 Plug 'flazz/vim-colorschemes'
@@ -41,6 +41,8 @@ Plug 'chilicuil/vim-sprunge'
 Plug 'vim-utils/vim-man'
 Plug 'mtth/scratch.vim'
 Plug 'brookhong/cscope.vim'
+Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
+Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 
 " Required:
 filetype plugin indent on
@@ -120,10 +122,16 @@ let g:UltiSnipsExpandTrigger="<C-k>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<C-tab>"
 
-" Cscope
+" Cscope maps
 nnoremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
 nnoremap <leader>l :call ToggleLocationList()<CR>
 
+" Session management maps
+nnoremap <leader>xs :SaveSession<space>
+nnoremap <leader>xo :OpenSession<space>
+nnoremap <leader>xd :DeleteSession<space>
+nnoremap <leader>xc :CloseSession<space>
+nnoremap <leader>xv :ViewSession<space>
 
 " Miscellanous:
 
@@ -162,10 +170,13 @@ let g:ycm_server_python_interpreter = '/usr/bin/python'
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 
 " Configure the colorcolumn
-set textwidth=120
+set textwidth=80
 set colorcolumn=+1
 
 if has('gui_running')
 
     set guifont=Droid\ Sans\ Mono\ for\ Powerline\ 8
 endif
+
+" Don't save sessions by default
+let g:session_autosave = 'no'

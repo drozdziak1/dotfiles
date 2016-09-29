@@ -1,0 +1,14 @@
+set folder = imap://webmail3.tivo.com:143/
+set from = sdrozd@tivo.com
+set hostname = "webmail3.tivo.com"
+set imap_pass = $my_cubiware_imap_pass
+set imap_user = "sdrozd"
+set postponed = +Drafts
+set realname = "Stanislaw Drozd"
+#set record = +Sent
+set signature = "Stanislaw Drozd"
+set smtp_url = smtp://$imap_user@webmail3.tivo.com
+set smtp_pass = $imap_pass
+set spoolfile = +INBOX
+set ssl_starttls = yes
+unset ssl_force_tls

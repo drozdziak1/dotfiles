@@ -2,40 +2,19 @@
 source "gpg -dq $HOME/.mutt/passwords.gpg |"
 
 # set the color scheme
-source "/usr/share/doc/mutt/colors/solarized/mutt-colors-solarized-dark-16.muttrc"
-
-# Receive options
-set imap_user = "drozdziak1@gmail.com"
-set folder = imaps://drozdziak1@imap.gmail.com/
-set spoolfile = +INBOX
-set postponed = +Drafts
-set record = +Sent
+source /usr/share/doc/mutt/colors/solarized/mutt-colors-solarized-dark-16.muttrc
 
 # cache options
-set message_cachedir = ~/.cache/mutt/messages
-set header_cache = ~/.cache/mutt/headers
-
-# Send options
-set smtp_url=smtps://$imap_user:$imap_pass@smtp.gmail.com
-set realname='Stanisław Drozd'
-set from=drozdziak1@gmail.com
-set hostname="gmail.com"
-set signature="Stanisław Drozd"
-
-# Connection options
-set ssl_force_tls = yes
-unset ssl_starttls
+set message_cachedir = ~/.mutt/messages
+set header_cache = ~/.mutt/headers
 
 # Sorting options
 set sort = reverse-threads
+set sort_aux = last-date
 
-source ~/.gpg.rc
+# Choose an account to load on start
+#source ~/.muttrc.gmail
+source ~/.muttrc.cubiware
 
-# PGP setup
-set pgp_use_gpg_agent = yes
-set pgp_sign_as = D55E7C65
-set pgp_timeout = 3600
-set crypt_autosign = no
-set crypt_replysign = yes
-set crypt_replyencrypt = yes
-set crypt_replysignencrypted = yes
+macro index,pager <f2> "<sync-mailbox><enter-command>source ~/.muttrc.gmail<enter><change-folder>!<enter>"
+macro index,pager <f3> "<sync-mailbox><enter-command>source ~/.muttrc.cubiware<enter><change-folder>!<enter>"

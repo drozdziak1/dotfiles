@@ -165,7 +165,7 @@ exec pasystray
 exec nm-applet
 
 # start system update
-exec "xfce4-terminal --command='yaourt -Syyu --aur --noconfirm'"
+exec "xfce4-terminal --command='yaourt -Syyua --noconfirm'"
 
 # change keyboard layout to polish
 exec "setxkbmap pl"
