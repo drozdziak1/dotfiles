@@ -9,7 +9,6 @@ Plug 'vim-airline/vim-airline-themes'
 " Shougo's plugins
 Plug 'Shougo/neobundle.vim'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'Shougo/vimshell.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make'}
 
 " Tim Pope's plugins
