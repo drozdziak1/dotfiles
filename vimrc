@@ -29,7 +29,6 @@ Plug 'mattn/webapi-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " Other plugins
 Plug 'flazz/vim-colorschemes'
@@ -40,7 +39,6 @@ Plug 'chilicuil/vim-sprunge'
 Plug 'vim-utils/vim-man'
 Plug 'mtth/scratch.vim'
 Plug 'brookhong/cscope.vim'
-Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 
 " Required:
