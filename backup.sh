@@ -1,9 +1,9 @@
 #!/bin/sh
 
-LOCK_FILE=/home/drozdziak1/.backup_in_progress
+LOCK_FILE=~/.backup_in_progress
 # Studia
 if [ ! -e $LOCK_FILE ]; then
 	touch $LOCK_FILE
-	rsync -a --info=progress2 --numeric-ids /home/drozdziak1/Studia drozdziak1@vps:/opt/backup
+	unison -batch ~/Studia ssh://drozdziak1@vps//opt/backup/Studia
 	rm $LOCK_FILE
 fi
