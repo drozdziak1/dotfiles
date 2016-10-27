@@ -1,5 +1,0 @@
-SILO_HOST=repo
-SILO_USER=sdrozd
-SILO_BINREPO=repo:/repository
-SILO_BINREPO_USER=sdrozd
-SILO_COLOR=yes
