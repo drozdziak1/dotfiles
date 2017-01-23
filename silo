@@ -3,3 +3,4 @@ SILO_USER=sdrozd
 SILO_BINREPO=repo:/repository
 SILO_BINREPO_USER=sdrozd
 SILO_COLOR=yes
+SILO_FILECACHE=/home/drozdziak1/.silocache
