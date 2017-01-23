@@ -8,8 +8,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Shougo's plugins
 Plug 'Shougo/neobundle.vim'
+Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'Shougo/vimproc.vim', { 'do': 'make'}
 
 " Tim Pope's plugins
 Plug 'tpope/vim-fugitive'
@@ -26,10 +26,7 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 
 " Snippets
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
 " Other plugins
 Plug 'flazz/vim-colorschemes'
 Plug 'jiangmiao/auto-pairs'
@@ -161,12 +158,6 @@ endif
 " Set a folding method
 set foldmethod=syntax
 
-" Give YouCompleteMe access to python3
-let g:ycm_server_python_interpreter = '/usr/bin/python'
-
-" Set a global cflags file for YouCompleteMe
-let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
-
 " Configure the colorcolumn
 set textwidth=120
 set colorcolumn=+1
@@ -178,3 +169,5 @@ endif
 
 " Don't save sessions by default
 let g:session_autosave = 'no'
+
+let g:neocomplete#enable_at_startup = 1
