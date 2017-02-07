@@ -37,6 +37,7 @@ Plug 'vim-utils/vim-man'
 Plug 'mtth/scratch.vim'
 Plug 'brookhong/cscope.vim'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
+Plug 'yegappan/mru'
 
 " Required:
 filetype plugin indent on
