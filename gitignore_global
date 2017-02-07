@@ -9,3 +9,7 @@ tags
 
 # cscope
 cscope.out
+
+# python
+*.pyc
+__pycache__
