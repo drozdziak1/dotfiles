@@ -65,7 +65,7 @@ let mapleader = ","
 noremap <leader>af :Autoformat<enter>
 
 " Map <leader>rt to refresh the ctags file
-noremap <leader>rt :!ctags -R<enter>
+noremap <leader>rt :!ctags -R<space>
 
 " Map <leader>fw to fix trailing spaces
 noremap <leader>fw :FixWhitespace<enter>
