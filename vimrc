@@ -173,4 +173,8 @@ endif
 " Don't save sessions by default
 let g:session_autosave = 'no'
 
+" Enable completion rightaway
 let g:neocomplete#enable_at_startup = 1
+
+" Jump to the taglist upon opening
+let Tlist_GainFocus_On_ToggleOpen = 1
