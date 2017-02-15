@@ -8,8 +8,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Shougo's plugins
 Plug 'Shougo/neobundle.vim'
+Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'Shougo/vimproc.vim', { 'do': 'make'}
 
 " Tim Pope's plugins
 Plug 'tpope/vim-fugitive'
@@ -26,10 +26,7 @@ Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 
 " Snippets
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
 " Other plugins
 Plug 'flazz/vim-colorschemes'
 Plug 'jiangmiao/auto-pairs'
@@ -40,6 +37,8 @@ Plug 'vim-utils/vim-man'
 Plug 'mtth/scratch.vim'
 Plug 'brookhong/cscope.vim'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
+Plug 'yegappan/mru'
+Plug 'vim-scripts/taglist.vim'
 
 " Required:
 filetype plugin indent on
@@ -63,13 +62,13 @@ let g:airline_symbols.space = "\ua0"
 let mapleader = ","
 
 " Map ,af to autoformat code
-noremap <leader>af :Autoformat<CR>
+noremap <leader>af :Autoformat<enter>
 
 " Map <leader>rt to refresh the ctags file
-noremap <leader>rt :!ctags -R<CR>
+noremap <leader>rt :!ctags -R<space>
 
 " Map <leader>fw to fix trailing spaces
-noremap <leader>fw :FixWhitespace<CR>
+noremap <leader>fw :FixWhitespace<enter>
 
 " Map <leader>cs to fast colorscheme changing
 noremap <leader>sc :colorscheme<space>
@@ -78,7 +77,7 @@ noremap <leader>sc :colorscheme<space>
 noremap <leader>w <C-w>
 
 " Map <leader>b to Breakpoint creation command
-noremap <leader>b :Breakpoint<CR>
+noremap <leader>b :Breakpoint<enter>
 
 " Insert space under cursor
 noremap <leader><space> i<space><esc>
@@ -88,31 +87,30 @@ noremap <leader>o o<esc>
 noremap <leader>O O<esc>
 
 " Toggle NERDTree on <leader>t
-noremap <leader>t :NERDTreeToggle<CR>
+noremap <leader>t :NERDTreeToggle<enter>
 
 " Suspend to shell
 noremap <leader>z <C-z>
 
 " VimShell
-noremap <leader>vs :VimShell<CR>
+noremap <leader>vs :VimShell<enter>
 
 
 " Pane resizing mapings
 " Taller
-noremap <leader>w. :res+5<CR>
+noremap <leader>w. :res+5<enter>
 
 " Shorter
-noremap <leader>w, :res-5<CR>
+noremap <leader>w, :res-5<enter>
 
 " Wider
-noremap <leader>w> :vertical res +5<CR>
+noremap <leader>w> :vertical res +5<enter>
 
 " Narrower
-noremap <leader>w< :vertical res -5<CR>"
+noremap <leader>w< :vertical res -5<enter>"
 
 " Close everything
-noremap <leader>wa :qa<CR>
-
+noremap <leader>wa :qa<enter>
 
 " Set ultisnips shortcuts
 let g:UltiSnipsExpandTrigger="<C-k>"
@@ -120,8 +118,8 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<C-tab>"
 
 " Cscope maps
-nnoremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
-nnoremap <leader>l :call ToggleLocationList()<CR>
+nnoremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<enter>
+nnoremap <leader>l :call ToggleLocationList()<enter>
 
 " Session management maps
 nnoremap <leader>xs :SaveSession<space>
@@ -129,6 +127,9 @@ nnoremap <leader>xo :OpenSession<space>
 nnoremap <leader>xd :DeleteSession<space>
 nnoremap <leader>xc :CloseSession<space>
 nnoremap <leader>xv :ViewSession<space>
+
+" Taglist map
+nnoremap <leader>e :TlistToggle<enter>
 
 " Miscellanous:
 
@@ -160,12 +161,6 @@ endif
 " Set a folding method
 set foldmethod=syntax
 
-" Give YouCompleteMe access to python3
-let g:ycm_server_python_interpreter = '/usr/bin/python'
-
-" Set a global cflags file for YouCompleteMe
-let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
-
 " Configure the colorcolumn
 set textwidth=80
 set colorcolumn=+1
@@ -177,3 +172,9 @@ endif
 
 " Don't save sessions by default
 let g:session_autosave = 'no'
+
+" Enable completion rightaway
+let g:neocomplete#enable_at_startup = 1
+
+" Jump to the taglist upon opening
+let Tlist_GainFocus_On_ToggleOpen = 1
