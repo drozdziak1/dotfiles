@@ -179,3 +179,6 @@ let g:neocomplete#enable_at_startup = 1
 
 " Jump to the taglist upon opening
 let Tlist_GainFocus_On_ToggleOpen = 1
+
+" Enable emoji completion
+set completefunc=emoji#complete
