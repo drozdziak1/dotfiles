@@ -39,6 +39,7 @@ Plug 'brookhong/cscope.vim'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 Plug 'yegappan/mru'
 Plug 'vim-scripts/taglist.vim'
+Plug 'junegunn/vim-emoji'
 
 " Required:
 filetype plugin indent on
