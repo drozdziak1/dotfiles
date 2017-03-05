@@ -40,6 +40,7 @@ Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 Plug 'yegappan/mru'
 Plug 'vim-scripts/taglist.vim'
 Plug 'junegunn/vim-emoji'
+Plug 'mhinz/vim-signify'
 
 " Required:
 filetype plugin indent on
