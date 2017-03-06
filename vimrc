@@ -39,6 +39,8 @@ Plug 'brookhong/cscope.vim'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 Plug 'yegappan/mru'
 Plug 'vim-scripts/taglist.vim'
+Plug 'junegunn/vim-emoji'
+Plug 'mhinz/vim-signify'
 
 " Required:
 filetype plugin indent on
@@ -178,3 +180,6 @@ let g:neocomplete#enable_at_startup = 1
 
 " Jump to the taglist upon opening
 let Tlist_GainFocus_On_ToggleOpen = 1
+
+" Enable emoji completion
+set completefunc=emoji#complete
