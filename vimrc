@@ -188,6 +188,9 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 " Enable emoji completion
 set completefunc=emoji#complete
 
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
 " Put plugins and dictionaries in this dir (also on Windows)
 let vimDir = '$HOME/.vim'
 let &runtimepath.=','.vimDir
