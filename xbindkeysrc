@@ -1,0 +1,15 @@
+# thumb wheel up => increase volume
+"pamixer -i 5"
+   b:6
+
+# thumb wheel down => lower volume
+"pamixer -d 5"
+   b:7
+
+# backward button => previous song
+"xte 'key XF86AudioNext'; playerctl next"
+   b:8
+
+# forward button => next song
+"xte 'key XF86AudioPrev'; playerctl previous"
+   b:9
