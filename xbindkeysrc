@@ -1,3 +1,5 @@
+# Mouse
+
 # thumb wheel up => increase volume
 "pamixer -i 5"
    b:6
@@ -6,10 +8,37 @@
 "pamixer -d 5"
    b:7
 
-# backward button => previous song
-"xte 'key XF86AudioNext'; playerctl next"
-   b:8
+# thumb button => play/pause
+"xte 'key XF86AudioPlay'; playerctl play-pause"
+   m:0x1c + c:23
 
-# forward button => next song
+# upper button => previous song
 "xte 'key XF86AudioPrev'; playerctl previous"
-   b:9
+   release + b:9
+
+# lower button => next song
+"xte 'key XF86AudioNext'; playerctl next"
+   release + b:8
+
+
+# Keyboard
+
+# Ctrl + Scroll Lock => play/pause
+"xte 'key XF86AudioPlay'; playerctl play-pause"
+   Control + Scroll_Lock
+
+# Ctrl + PrtScr => previous song
+"xte 'key XF86AudioPrev'; playerctl previous"
+   Control + Print
+
+# Ctrl + PauseBreak => next song
+"xte 'key XF86AudioNext'; playerctl next"
+   Control + Pause
+
+# PrtScr => screenshot
+"scrot screenshot.png"
+   Print
+
+# Menu => screenshot with window selection
+"scrot -s screenshot.png"
+   Menu + Release
