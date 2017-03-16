@@ -185,6 +185,9 @@ exec "export DISPLAY=:0.0"
 exec "xset s off"
 exec "xset -dpms"
 
+# Enable X11 key bindings
+exec "xbindkeys"
+
 # restore screen layout
 exec "sh ~/.screenlayout.sh"
 

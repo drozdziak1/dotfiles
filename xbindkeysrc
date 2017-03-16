@@ -1,26 +1,3 @@
-# Mouse
-
-# thumb wheel up => increase volume
-"pamixer -i 5"
-   b:6
-
-# thumb wheel down => lower volume
-"pamixer -d 5"
-   b:7
-
-# thumb button => play/pause
-"xte 'key XF86AudioPlay'; playerctl play-pause"
-   m:0x1c + c:23
-
-# upper button => previous song
-"xte 'key XF86AudioPrev'; playerctl previous"
-   release + b:9
-
-# lower button => next song
-"xte 'key XF86AudioNext'; playerctl next"
-   release + b:8
-
-
 # Keyboard
 
 # Ctrl + Scroll Lock => play/pause
