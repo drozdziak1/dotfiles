@@ -1,15 +1,15 @@
 # Keyboard
 
 # Ctrl + Scroll Lock => play/pause
-"xte 'key XF86AudioPlay'; playerctl play-pause"
+"xte 'key XF86AudioPlay'; dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
    Control + Scroll_Lock
 
 # Ctrl + PrtScr => previous song
-"xte 'key XF86AudioPrev'; playerctl previous"
+"xte 'key XF86AudioPrev'; dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
    Control + Print
 
 # Ctrl + PauseBreak => next song
-"xte 'key XF86AudioNext'; playerctl next"
+"xte 'key XF86AudioNext'; dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
    Control + Pause
 
 # PrtScr => screenshot
@@ -19,3 +19,11 @@
 # Menu => screenshot with window selection
 "scrot -s screenshot.png"
    Menu + Release
+
+# Previous
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+   XF86AudioPrev
+
+# Stop
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+   XF86AudioStop
