@@ -184,6 +184,9 @@ exec "export DISPLAY=:0.0"
 exec "xset s off"
 exec "xset -dpms"
 
+# run xbindkeys
+exec "xbindkeys"
+
 # restore screen layout
 exec "sh ~/.screenlayout/default.sh"
 

@@ -39,6 +39,9 @@ Plug 'brookhong/cscope.vim'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 Plug 'yegappan/mru'
 Plug 'vim-scripts/taglist.vim'
+Plug 'junegunn/vim-emoji'
+Plug 'mhinz/vim-signify'
+Plug 'mbbill/undotree'
 
 " Required:
 filetype plugin indent on
@@ -131,6 +134,9 @@ nnoremap <leader>xv :ViewSession<space>
 " Taglist map
 nnoremap <leader>e :TlistToggle<enter>
 
+" Undotree map
+nnoremap <leader>mt :UndotreeToggle<enter>:UndotreeFocus<enter>
+
 " Miscellanous:
 
 " Syntax highlighting
@@ -178,3 +184,23 @@ let g:neocomplete#enable_at_startup = 1
 
 " Jump to the taglist upon opening
 let Tlist_GainFocus_On_ToggleOpen = 1
+
+" Enable emoji completion
+set completefunc=emoji#complete
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
+
+" Put plugins and dictionaries in this dir (also on Windows)
+let vimDir = '$HOME/.vim'
+let &runtimepath.=','.vimDir
+
+" Keep undo history across sessions by storing it in a file
+if has('persistent_undo')
+    let myUndoDir = expand(vimDir . '/undodir')
+    " Create dirs
+    call system('mkdir ' . vimDir)
+    call system('mkdir ' . myUndoDir)
+    let &undodir = myUndoDir
+    set undofile
+endif
