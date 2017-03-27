@@ -1,0 +1,1 @@
+duplicity --no-encryption --exclude "/home/*/.cache" --exclude "/home/*/cubiware-*/sbuild-*" --exclude "/home/*/.silocache" --exclude /home/lost+found /home file:///opt/backup --progress --progress-rate 1
