@@ -180,6 +180,12 @@ exec "grep -rl '|' ~/.redshiftgrc | xargs sed -i 's/|/,/g'"
 # run redshift
 exec "redshiftgui"
 
+# start hamster
+exec "hamster"
+
+# start copyq
+exec "copyq"
+
 # prevent screen from blanking:
 exec "export DISPLAY=:0.0"
 exec "xset s off"
