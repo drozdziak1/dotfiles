@@ -42,3 +42,9 @@
 # Menu => screenshot with window selection
 "scrot -s screenshot.png"
    Menu + Release
+
+"notify-send 'Starting lulu'; ~/lulu"
+   Mod4 + slash
+
+"killall lulu && notify-send 'Killed lulu' || notify-send 'No lulu killed'"
+   Shift + Mod4 + slash
