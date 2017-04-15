@@ -121,21 +121,24 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<C-tab>"
 
 " Cscope maps
-nnoremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<enter>
-nnoremap <leader>l :call ToggleLocationList()<enter>
+noremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<enter>
+noremap <leader>l :call ToggleLocationList()<enter>
 
 " Session management maps
-nnoremap <leader>xs :SaveSession<space>
-nnoremap <leader>xo :OpenSession<space>
-nnoremap <leader>xd :DeleteSession<space>
-nnoremap <leader>xc :CloseSession<space>
-nnoremap <leader>xv :ViewSession<space>
+noremap <leader>xs :SaveSession<space>
+noremap <leader>xo :OpenSession<space>
+noremap <leader>xd :DeleteSession<space>
+noremap <leader>xc :CloseSession<space>
+noremap <leader>xv :ViewSession<space>
 
 " Taglist map
-nnoremap <leader>e :TlistToggle<enter>
+noremap <leader>e :TlistToggle<enter>
 
 " Undotree map
-nnoremap <leader>mt :UndotreeToggle<enter>:UndotreeFocus<enter>
+noremap <leader>mt :UndotreeToggle<enter>:UndotreeFocus<enter>
+
+" MRU map
+noremap <leader>mr :MRU<enter>
 
 " Miscellanous:
 
