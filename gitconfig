@@ -1,5 +1,5 @@
 [user]
-	name = Stanisław Drozd
+	name = Stan Drozd
 	email = drozdziak1@gmail.com
 [merge]
 	tool = vimdiff
@@ -12,3 +12,5 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
+[color]
+	ui = auto
