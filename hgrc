@@ -1,0 +1,12 @@
+[ui]
+username=Stanislaw Drozd <sdrozd@tivo.com>
+editor=vim
+merge=internal:merge
+
+ignore=~/.hgignore
+
+[extensions]
+color=
+transplant=
+histedit=
+rebase=
