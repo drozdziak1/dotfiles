@@ -27,21 +27,23 @@ Plug 'mattn/webapi-vim'
 
 " Snippets
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+
 " Other plugins
-Plug 'flazz/vim-colorschemes'
-Plug 'jiangmiao/auto-pairs'
 Plug 'Chiel92/vim-autoformat'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'chilicuil/vim-sprunge'
-Plug 'vim-utils/vim-man'
-Plug 'mtth/scratch.vim'
 Plug 'brookhong/cscope.vim'
+Plug 'chilicuil/vim-sprunge'
+Plug 'flazz/vim-colorschemes'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/vim-emoji'
+Plug 'mbbill/undotree'
+Plug 'mhinz/vim-signify'
+Plug 'mtth/scratch.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'vim-scripts/taglist.vim'
+Plug 'vim-utils/vim-man'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 Plug 'yegappan/mru'
-Plug 'vim-scripts/taglist.vim'
-Plug 'junegunn/vim-emoji'
-Plug 'mhinz/vim-signify'
-Plug 'mbbill/undotree'
 
 " Required:
 filetype plugin indent on
@@ -207,3 +209,6 @@ if has('persistent_undo')
     let &undodir = myUndoDir
     set undofile
 endif
+
+" Check rust code with rustc
+let g:syntastic_rust_checkers = ['rustc']

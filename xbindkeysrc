@@ -1,5 +1,17 @@
 # Keyboard
 
+# Volume Up
+"pamixer -i 5"
+   XF86AudioRaiseVolume
+
+# Volume Down
+"pamixer -d 5"
+   XF86AudioLowerVolume
+# Mute
+"pamixer -t"
+   XF86AudioMute
+
+
 # Ctrl + Scroll Lock => play/pause
 "xte 'key XF86AudioPlay'; dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
    Control + Scroll_Lock
