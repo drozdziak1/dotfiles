@@ -214,3 +214,6 @@ endif
 
 " Check rust code with rustc
 let g:syntastic_rust_checkers = ['cargo']
+
+" Provide the racer binary
+let g:racer_cmd = substitute(system("which racer"), '\n\+$', '', '')
