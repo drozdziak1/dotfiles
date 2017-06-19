@@ -32,14 +32,16 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'Chiel92/vim-autoformat'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'brookhong/cscope.vim'
+Plug 'cespare/vim-toml'
 Plug 'chilicuil/vim-sprunge'
 Plug 'flazz/vim-colorschemes'
 Plug 'jiangmiao/auto-pairs'
+Plug 'jlevesy/rust.vim'
 Plug 'junegunn/vim-emoji'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-signify'
 Plug 'mtth/scratch.vim'
-Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 Plug 'vim-scripts/taglist.vim'
 Plug 'vim-utils/vim-man'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
@@ -211,4 +213,7 @@ if has('persistent_undo')
 endif
 
 " Check rust code with rustc
-let g:syntastic_rust_checkers = ['rustc']
+let g:syntastic_rust_checkers = ['cargo']
+
+" Provide the racer binary
+let g:racer_cmd = substitute(system("which racer"), '\n\+$', '', '')
