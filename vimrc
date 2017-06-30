@@ -171,6 +171,12 @@ if !exists('g:formatdef_astyle_c')
     let g:formatdef_astyle_c = '"astyle --mode=c --style=kr -k3 -pcH".(&expandtab ? "s".shiftwidth() : "t")'
 endif
 
+" Choose a formatter for C++
+let g:formatters_cpp = ['astyle_cpp']
+if !exists('g:formatdef_astyle_cpp')
+    let g:formatdef_astyle_cpp = '"astyle --mode=c --style=kr -k3 -pcH".(&expandtab ? "s".shiftwidth() : "t")'
+endif
+
 " Set a folding method
 set foldmethod=syntax
 
