@@ -23,6 +23,18 @@
 
 # Keyboard
 
+# Volume Up
+"pamixer -i 5"
+   XF86AudioRaiseVolume
+
+# Volume Down
+"pamixer -d 5"
+   XF86AudioLowerVolume
+# Mute
+"pamixer -t"
+   XF86AudioMute
+
+
 # Ctrl + Scroll Lock => play/pause
 "xte 'key XF86AudioPlay'; playerctl play-pause"
    Control + Scroll_Lock

@@ -27,21 +27,25 @@ Plug 'mattn/webapi-vim'
 
 " Snippets
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+
 " Other plugins
-Plug 'flazz/vim-colorschemes'
-Plug 'jiangmiao/auto-pairs'
 Plug 'Chiel92/vim-autoformat'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'chilicuil/vim-sprunge'
-Plug 'vim-utils/vim-man'
-Plug 'mtth/scratch.vim'
 Plug 'brookhong/cscope.vim'
+Plug 'cespare/vim-toml'
+Plug 'chilicuil/vim-sprunge'
+Plug 'flazz/vim-colorschemes'
+Plug 'jiangmiao/auto-pairs'
+Plug 'jlevesy/rust.vim'
+Plug 'junegunn/vim-emoji'
+Plug 'mbbill/undotree'
+Plug 'mhinz/vim-signify'
+Plug 'mtth/scratch.vim'
+Plug 'racer-rust/vim-racer'
+Plug 'vim-scripts/taglist.vim'
+Plug 'vim-utils/vim-man'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 Plug 'yegappan/mru'
-Plug 'vim-scripts/taglist.vim'
-Plug 'junegunn/vim-emoji'
-Plug 'mhinz/vim-signify'
-Plug 'mbbill/undotree'
 
 " Required:
 filetype plugin indent on
@@ -167,6 +171,12 @@ if !exists('g:formatdef_astyle_c')
     let g:formatdef_astyle_c = '"astyle --mode=c --style=kr -k3 -pcH".(&expandtab ? "s".shiftwidth() : "t")'
 endif
 
+" Choose a formatter for C++
+let g:formatters_cpp = ['astyle_cpp']
+if !exists('g:formatdef_astyle_cpp')
+    let g:formatdef_astyle_cpp = '"astyle --mode=c --style=kr -k3 -pcH".(&expandtab ? "s".shiftwidth() : "t")'
+endif
+
 " Set a folding method
 set foldmethod=syntax
 
@@ -207,3 +217,9 @@ if has('persistent_undo')
     let &undodir = myUndoDir
     set undofile
 endif
+
+" Check rust code with rustc
+let g:syntastic_rust_checkers = ['cargo']
+
+" Provide the racer binary
+let g:racer_cmd = substitute(system("which racer"), '\n\+$', '', '')
