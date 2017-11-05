@@ -92,3 +92,6 @@ alias vimconfig="$EDITOR ~/.vimrc"
 
 # set the src dir for rust's racer
 export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
+
+# added by travis gem
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
