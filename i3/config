@@ -162,7 +162,7 @@ bar {
 exec pasystray
 
 # start the wireless manager
-exec wicd-gtk
+exec nm-applet
 
 # start system update
 exec "xfce4-terminal --command='pacaur -Syyu --noconfirm'"
