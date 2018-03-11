@@ -21,7 +21,17 @@
 "playerctl next"
    XF86AudioNext
 
-# External keyboard mappings
+"xbacklight -inc 5 -time 0; notify-send -t 500 Backlight: $(xbacklight)\%"
+   XF86MonBrightnessUp
+
+"xbacklight -dec 5 -time 0; notify-send -t 500 Backlight: $(xbacklight)\%"
+   XF86MonBrightnessDown
+
+"xbacklight -inc 1 -time 0; notify-send -t 500 Backlight: $(xbacklight)\%"
+   Control + XF86MonBrightnessUp
+
+"xbacklight -dec 1 -time 0; notify-send -t 500 Backlight: $(xbacklight)\%"
+   Control + XF86MonBrightnessDown
 
 # Ctrl + Scroll Lock => play/pause
 "xte 'key XF86AudioPlay'; playerctl play-pause"
@@ -44,7 +54,7 @@
    Menu + Release
 
 "notify-send 'Starting lulu'; ~/lulu"
-   Mod4 + slash
+Mod4 + slash
 
 "killall lulu && notify-send 'Killed lulu' || notify-send 'No lulu killed'"
    Shift + Mod4 + slash
