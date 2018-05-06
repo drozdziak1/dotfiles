@@ -18,3 +18,6 @@ source $HOME/.bash-powerline.sh
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
+# added by travis gem
+[ -f /home/drozdziak1/.travis/travis.sh ] && source /home/drozdziak1/.travis/travis.sh
