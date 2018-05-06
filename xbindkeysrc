@@ -1,3 +1,18 @@
+# Mouse
+
+# thumb button => play/pause
+"xte 'key XF86AudioPlay'; playerctl play-pause"
+   m:0x1c + c:23
+
+# upper button => previous song
+"xte 'key XF86AudioPrev'; playerctl previous"
+   release + b:9
+
+# lower button => next song
+"xte 'key XF86AudioNext'; playerctl next"
+   release + b:8
+
+
 # Keyboard
 
 # Volume Up
@@ -21,16 +36,16 @@
 "playerctl next"
    XF86AudioNext
 
-"xbacklight -inc 5 -time 0; notify-send -t 500 Backlight: $(xbacklight)\%"
+"light -A 5; notify-send -t 500 Backlight: $(light)\%"
    XF86MonBrightnessUp
 
-"xbacklight -dec 5 -time 0; notify-send -t 500 Backlight: $(xbacklight)\%"
+"light -U 5; notify-send -t 500 Backlight: $(light)\%"
    XF86MonBrightnessDown
 
-"xbacklight -inc 1 -time 0; notify-send -t 500 Backlight: $(xbacklight)\%"
+"light -A 1; notify-send -t 500 Backlight: $(light)\%"
    Control + XF86MonBrightnessUp
 
-"xbacklight -dec 1 -time 0; notify-send -t 500 Backlight: $(xbacklight)\%"
+"light -U 1; notify-send -t 500 Backlight: $(light)\%"
    Control + XF86MonBrightnessDown
 
 # Ctrl + Scroll Lock => play/pause
