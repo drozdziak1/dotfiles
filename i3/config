@@ -197,6 +197,9 @@ exec "sh ~/.screenlayout/default.sh"
 # set the wallpaper
 exec "nitrogen --restore"
 
+# Start the input method manager
+exec "ibus-daemon"
+
 # binding for switching workspaces
 bindsym $mod+Control+Left workspace prev
 bindsym $mod+Control+Right workspace next
