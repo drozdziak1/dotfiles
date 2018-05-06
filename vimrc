@@ -19,7 +19,6 @@ Plug 'tpope/vim-sleuth'
 " Scrooloose's plugins
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/syntastic'
 
 " Mattn's plugins
 Plug 'mattn/gist-vim'
@@ -41,12 +40,14 @@ Plug 'junegunn/vim-emoji'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-signify'
 Plug 'mtth/scratch.vim'
+Plug 'pearofducks/ansible-vim'
 Plug 'racer-rust/vim-racer'
 Plug 'tomlion/vim-solidity'
 Plug 'vim-scripts/taglist.vim'
 Plug 'vim-utils/vim-man'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 Plug 'yegappan/mru'
+Plug 'w0rp/ale'
 
 " Required:
 filetype plugin indent on
@@ -225,8 +226,7 @@ if has('persistent_undo')
     set undofile
 endif
 
-" Check rust code with rustc
-let g:syntastic_rust_checkers = ['cargo']
-
 " Provide the racer binary
 let g:racer_cmd = substitute(system("which racer"), '\n\+$', '', '')
+
+let g:ale_linters = { 'rust': ['rls'], }
