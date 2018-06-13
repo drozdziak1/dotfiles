@@ -49,7 +49,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git themes)
+plugins=(git themes rust cargo web-search)
 
 # User configuration
 
@@ -100,6 +100,9 @@ export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
+
+# rustup completions
+fpath+=~/.zfunc
 
 # added by travis gem
 [ -f /home/drozdziak1/.travis/travis.sh ] && source /home/drozdziak1/.travis/travis.sh
