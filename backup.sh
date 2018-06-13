@@ -1,4 +1,5 @@
 #!/bin/sh
+set +e
 
 # Backup $HOME
 duplicity ~ file:///opt/backup \
@@ -8,6 +9,7 @@ duplicity ~ file:///opt/backup \
     --name "${USER}_home" \
     --exclude "**.cache/**" \
     --exclude "**.rustup/**" \
+    --exclude "**.cargo/**" \
     && notify-send -u low -t 5000 "Local backup complete" \
     || notify-send -u critical -t 10000 "Local backup failed"
 
