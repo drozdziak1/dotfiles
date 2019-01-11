@@ -13,3 +13,6 @@ cscope.out
 # python
 *.pyc
 __pycache__
+
+# Virtualenv
+.drozdziak1-virtualenv/*

@@ -10,6 +10,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Shougo/neobundle.vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'Shougo/vimproc.vim'
 
 " Tim Pope's plugins
 Plug 'tpope/vim-fugitive'
@@ -48,6 +49,7 @@ Plug 'vim-utils/vim-man'
 Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
 Plug 'yegappan/mru'
 Plug 'w0rp/ale'
+Plug 'wilsaj/chuck.vim'
 
 " Required:
 filetype plugin indent on
@@ -158,7 +160,7 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 syntax on
 
 " Syntax highlighting theme:
-colorscheme Tomorrow-Night
+colorscheme Tomorrow
 
 " Always show line number
 set number

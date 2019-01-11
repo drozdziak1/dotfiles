@@ -106,3 +106,6 @@ fpath+=~/.zfunc
 
 # added by travis gem
 [ -f /home/drozdziak1/.travis/travis.sh ] && source /home/drozdziak1/.travis/travis.sh
+
+# Alias for a bell sound
+alias make_noise="mpv /usr/share/sounds/freedesktop/stereo/complete.oga"

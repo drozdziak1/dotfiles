@@ -1,6 +1,8 @@
 #!/bin/sh
 set +e
 
+export DISPLAY=:0
+
 # Backup $HOME
 duplicity ~ file:///opt/backup \
     --no-encryption \
@@ -14,6 +16,6 @@ duplicity ~ file:///opt/backup \
     || notify-send -u critical -t 10000 "Local backup failed"
 
 # Old backup removal
-duplicity remove-older-than 1M --force file:///opt/backup \
+duplicity remove-older-than 2W --force file:///opt/backup \
     && notify-send -u low -t 5000 "Old backup cleanup done" \
     || notify-send -u critical -t 10000 "Old backup cleanup failed"

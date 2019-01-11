@@ -14,3 +14,5 @@
 	prompt = false
 [color]
 	ui = auto
+[commit]
+	gpgSign = true

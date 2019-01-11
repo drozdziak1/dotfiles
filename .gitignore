@@ -10,3 +10,6 @@ weechat/script/plugins.xml.gz
 
 # merge trash
 *.orig
+
+# virtualenv
+.drozdziak1-virtualenv
