@@ -61,11 +61,11 @@
    Control + Pause
 
 # PrtScr => screenshot
-"scrot screenshot.png"
+"scrot -e 'mv $f ~/Screenshots/$f'"
    Print
 
 # Menu => screenshot with window selection
-"scrot -s screenshot.png"
+"scrot -s -e 'mv $f ~/Screenshots/$f'"
    Menu + Release
 
 "notify-send 'Starting lulu'; ~/lulu"

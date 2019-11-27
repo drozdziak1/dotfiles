@@ -8,7 +8,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Shougo's plugins
 Plug 'Shougo/neobundle.vim'
-Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/deoplete.nvim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'Shougo/vimproc.vim'
 
@@ -38,6 +38,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jlevesy/rust.vim'
 Plug 'junegunn/vim-emoji'
+Plug 'lervag/vimtex'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-signify'
 Plug 'mtth/scratch.vim'
@@ -46,10 +47,10 @@ Plug 'racer-rust/vim-racer'
 Plug 'tomlion/vim-solidity'
 Plug 'vim-scripts/taglist.vim'
 Plug 'vim-utils/vim-man'
-Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
-Plug 'yegappan/mru'
 Plug 'w0rp/ale'
 Plug 'wilsaj/chuck.vim'
+Plug 'xolox/vim-misc' | Plug 'xolox/vim-session'
+Plug 'yegappan/mru'
 
 " Required:
 filetype plugin indent on
@@ -148,19 +149,22 @@ noremap <leader>mt :UndotreeToggle<enter>:UndotreeFocus<enter>
 " MRU map
 noremap <leader>mr :MRU<enter>
 
-" Racer mappings
-au FileType rust nmap gd <Plug>(rust-def)
-au FileType rust nmap gs <Plug>(rust-def-split)
-au FileType rust nmap gx <Plug>(rust-def-vertical)
-au FileType rust nmap <leader>gd <Plug>(rust-doc)
+" Tab switching
+nnoremap <tab> :tabnext<CR>
+nnoremap <S-tab> :tabprevious<CR>
+nnoremap <leader><tab> :tabnew<CR>
+
+" ALE mappings
+noremap <leader>d :ALEGoToDefinition<CR>
+noremap <leader>k :ALEHover<CR>
+
+" Running commands
+nnoremap <leader>r :!
 
 " Miscellanous:
 
 " Syntax highlighting
 syntax on
-
-" Syntax highlighting theme:
-colorscheme Tomorrow
 
 " Always show line number
 set number
@@ -170,6 +174,9 @@ set laststatus=2
 
 " Color scheme required by airline
 set t_Co=256
+
+" Syntax highlighting theme:
+colorscheme Tomorrow-Night
 
 " set tab to 4 literal spaces
 " set tabstop=4 shiftwidth=4 expandtab
@@ -203,7 +210,7 @@ endif
 let g:session_autosave = 'no'
 
 " Enable completion rightaway
-let g:neocomplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 
 " Jump to the taglist upon opening
 let Tlist_GainFocus_On_ToggleOpen = 1

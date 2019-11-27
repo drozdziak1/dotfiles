@@ -109,3 +109,9 @@ fpath+=~/.zfunc
 
 # Alias for a bell sound
 alias make_noise="mpv /usr/share/sounds/freedesktop/stereo/complete.oga"
+
+# check how timetracking's going
+alias tsw="timew summary work"
+
+# Send tmux buffer to clipboard
+alias tmcopy="copyq; tmux show-buffer | copyq copy -"
