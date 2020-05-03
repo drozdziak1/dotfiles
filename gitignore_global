@@ -16,3 +16,6 @@ __pycache__
 
 # Virtualenv
 .drozdziak1-virtualenv/*
+
+# JS
+node_modules

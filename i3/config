@@ -193,7 +193,7 @@ exec "xbindkeys"
 exec "nitrogen --restore"
 
 # Start the input method manager
-exec "ibus-daemon"
+exec "ibus-daemon -d"
 
 # Start compositor
 exec "compton"

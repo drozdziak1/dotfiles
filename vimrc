@@ -39,11 +39,14 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'jlevesy/rust.vim'
 Plug 'junegunn/vim-emoji'
 Plug 'lervag/vimtex'
+Plug 'LnL7/vim-nix'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-signify'
 Plug 'mtth/scratch.vim'
 Plug 'pearofducks/ansible-vim'
 Plug 'racer-rust/vim-racer'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'roxma/nvim-yarp'
 Plug 'tomlion/vim-solidity'
 Plug 'vim-scripts/taglist.vim'
 Plug 'vim-utils/vim-man'
@@ -74,7 +77,8 @@ let g:airline_symbols.space = "\ua0"
 let mapleader = ","
 
 " Map ,af to autoformat code
-noremap <leader>af :Autoformat<enter>
+"noremap <leader>af :Autoformat<enter>
+noremap <leader>af :ALEFix<enter>
 
 " Map <leader>rt to refresh the ctags file
 noremap <leader>rt :!ctags -R<space>
@@ -238,4 +242,28 @@ endif
 " Provide the racer binary
 let g:racer_cmd = substitute(system("which racer"), '\n\+$', '', '')
 
-let g:ale_linters = { 'rust': ['rls'], }
+
+" Configure ALE fixers
+let g:ale_fixers = {
+            \'nix': ['nixpkgs-fmt'],
+            \'python': ['autopep8'],
+            \'rust': ['rustfmt'],
+            \'javascript': ['prettier', 'eslint'],
+            \'vue': ['prettier'],
+            \}
+
+" Configure ALE linters
+let g:ale_linters = {
+            \'rust': ['rls']
+            \}
+
+" Configure rust-analyzer
+let g:ale_rust_rls_config = {
+            \'rust': {
+            \'all_targets': 1,
+            \'build_on_save': 1,
+            \'clippy_preference': 'on'
+            \}
+            \}
+let g:ale_rust_rls_toolchain = ''
+let g:ale_rust_rls_executable = 'rust-analyzer'

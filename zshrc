@@ -49,7 +49,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git themes rust cargo web-search)
+plugins=(git themes rust cargo web-search nvm)
 
 # User configuration
 
@@ -115,3 +115,6 @@ alias tsw="timew summary work"
 
 # Send tmux buffer to clipboard
 alias tmcopy="copyq; tmux show-buffer | copyq copy -"
+
+# home-manager for nix
+source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
