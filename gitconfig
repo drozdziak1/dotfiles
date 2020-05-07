@@ -1,6 +1,7 @@
 [user]
 	name = Stan Drozd
 	email = drozdziak1@gmail.com
+	signingkey = 853EFB9B1FA9229742E8D5DADAC12712DC30BCA9
 [merge]
 	tool = vimdiff
 [core]

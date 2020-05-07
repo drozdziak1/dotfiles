@@ -249,12 +249,14 @@ let g:ale_fixers = {
             \'python': ['autopep8'],
             \'rust': ['rustfmt'],
             \'javascript': ['prettier', 'eslint'],
+            \'json': ['prettier'],
             \'vue': ['prettier'],
             \}
 
 " Configure ALE linters
 let g:ale_linters = {
-            \'rust': ['rls']
+            \'rust': ['rls'],
+            \'vue': ['vls']
             \}
 
 " Configure rust-analyzer

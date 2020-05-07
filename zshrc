@@ -58,8 +58,6 @@ export PATH="$PATH:/usr/lib/hardening-wrapper/bin:/opt/cuda/bin:/usr/bin/core_pe
 
 source $ZSH/oh-my-zsh.sh
 
-export BROWSER=/usr/bin/firefox
-
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -89,6 +87,8 @@ fi
 
 alias zshconfig="$EDITOR ~/.zshrc"
 alias vimconfig="$EDITOR ~/.vimrc"
+alias nixconfig="$EDITOR ~/.config/nixpkgs"
+alias nixosconfig="$EDITOR /etc/nixos"
 
 # set the src dir for rust's racer
 export RUST_SRC_PATH=$(rustc --print sysroot)/lib/rustlib/src/rust/src
@@ -116,5 +116,5 @@ alias tsw="timew summary work"
 # Send tmux buffer to clipboard
 alias tmcopy="copyq; tmux show-buffer | copyq copy -"
 
-# home-manager for nix
-source $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+# Setup direnv
+eval "$(direnv hook zsh)"

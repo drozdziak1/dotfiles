@@ -167,7 +167,7 @@ exec pasystray
 exec nm-applet
 
 # start system update
-exec "xfce4-terminal --command='trizen -Syyu --noconfirm'"
+#exec "xfce4-terminal --command='trizen -Syyu --noconfirm'"
 
 # change keyboard layout to polish
 exec "setxkbmap pl"
