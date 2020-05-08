@@ -53,7 +53,7 @@ plugins=(git themes rust cargo web-search nvm)
 
 # User configuration
 
-export PATH="$PATH:/usr/lib/hardening-wrapper/bin:/opt/cuda/bin:/usr/bin/core_perl:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/local/bin:/usr/local/sbin:/bin:$HOME/bin:$HOME/.local/bin:$(ruby -e 'print Gem.user_dir')/bin:$HOME/go/bin:$HOME/.cargo/bin"
+export PATH="$PATH:/usr/lib/hardening-wrapper/bin:/opt/cuda/bin:/usr/bin/core_perl:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/local/bin:/usr/local/sbin:/bin:$HOME/bin:$HOME/.local/bin:$HOME/go/bin:$HOME/.cargo/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
